@@ -1,0 +1,107 @@
+<header>
+    <mat-toolbar class="position-fixed">
+        <span>Travella</span>
+        <span class="example-spacer"></span>
+
+        <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon"> -->
+        <span class="material-icons">account_circle</span>
+        <!-- </button> -->
+    </mat-toolbar>
+</header>
+
+<div class="scroll">
+
+    <div class="container"><input type="text" placeholder="Find flight">
+    </div>
+
+    <!-- <div fxLayout="row wrap ">
+
+        <div *ngFor="let i of Placecard" fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+            <mat-card class="mat-elevation-z4">
+
+                <span> <img mat-card-image src="{{ i.url }}" height="90%">
+                    <div class="bottom-left">{{i.name}}</div>
+                </span>
+
+                <mat-card-content>
+
+                </mat-card-content>
+
+            </mat-card>
+        </div>
+    </div> -->
+    <!-- <div class="container">
+        <span>Let's Explore pakistan</span>
+
+    </div> -->
+
+    <mat-grid-list cols=3 rowHeight="100" gutterSize="10">
+        <mat-grid-tile class="heading">Let's Explore pakistan
+        </mat-grid-tile>
+        <mat-grid-tile style="    padding-left: 100px !important;
+        ">
+            <img src=" ./../../assets/images/Wavy Buddies Plane.png">
+        </mat-grid-tile>
+        <mat-grid-tile><button class="go"> Go</button> </mat-grid-tile>
+
+    </mat-grid-list>
+    <hr align="center" width="50%">
+    <mat-grid-list cols=3 rowHeight="100" gutterSize="10">
+        <mat-grid-tile class="heading1">Get inspired<br>
+        </mat-grid-tile>
+        <mat-grid-tile>
+        </mat-grid-tile>
+        <mat-grid-tile><label style="padding-left: 30%; color:#00a5ff; font-weight: 400;"> Show all</label>
+        </mat-grid-tile>
+
+    </mat-grid-list>
+    <mat-grid-list cols=2 rowHeight="200" gutterSize="10">
+        <mat-grid-tile *ngFor="let i of Placecard">
+            <mat-card class="mat-elevation-z4">
+
+                <!-- <span> -->
+                <img mat-card-image src="{{ i.url }}" height="90%">
+                <div class="bottom-left">{{i.name}}</div>
+                <!-- <span  class="material-icons">star</span> -->
+
+                <!-- </span> -->
+                <!-- <div style="transform: translate(0px,0px);" class="material-icons">star</div> -->
+
+                <!-- <mat-card-content>
+                    <span style="transform: translate(0px,0px);" class="material-icons">star</span>
+
+                </mat-card-content> -->
+
+                <!-- <div style="transform: translate(-10px,-55px);" class="material-icons">star</div> -->
+                <!-- <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions> -->
+            </mat-card>
+
+        </mat-grid-tile>
+    </mat-grid-list>
+    <div class="container">
+    </div>
+    <div class="container">
+    </div>
+    <footer>
+        <mat-toolbar class="toolbarNav">
+            <button mat-flat-button routerLink="/top-artists" routerLinkActive="active-link">
+                <span class="material-icons color_blue">
+                    airplanemode_active</span>
+                <span>Flights</span>
+            </button>
+            <button mat-flat-button routerLink="/top-tracks" routerLinkActive="active-link">
+                <span class="material-icons color_blue">business
+                </span>
+                <span>Hotels</span>
+            </button>
+            <button mat-flat-button routerLink="/history" routerLinkActive="active-link">
+                <span class="material-icons color_blue">home</span>
+                <span>Home</span>
+            </button>
+        </mat-toolbar>
+    </footer>
+
+</div>
