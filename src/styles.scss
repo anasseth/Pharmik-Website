@@ -47,6 +47,9 @@
         5. HELPERS
         6. CUSTOM
 */
+
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '~ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
 :root {
   --space-unit: 1em;
   --space-xxxxs: calc(0.09 * var(--space-unit));
