@@ -13,6 +13,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatGridListModule} from '@angular/material/grid-list';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { BlogComponent } from './blog/blog.component';
+import { ShopComponent } from './shop/shop.component';
+import { FaqsComponent } from './faqs/faqs.component';
 
 
 @NgModule({
@@ -20,6 +25,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AppComponent,
     LoginpageComponent,
     DashboardComponent,
+    AboutusComponent,
+    ContactusComponent,
+    BlogComponent,
+    ShopComponent,
+    FaqsComponent,
     // MatToolbarModule,
 
   ],

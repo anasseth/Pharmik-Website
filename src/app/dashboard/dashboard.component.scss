@@ -1,94 +1,194 @@
-.example-spacer {
-    flex: 1 1 auto;
-}
+.img1 {
 
-mat-toolbar {
-    background-color: rgb(252, 252, 252);
-    height          : 50px;
-
-}
-
-.position-fixed {
-    position: fixed;
-    z-index : 1;
-}
-
-span {
-    font-weight: bold;
-}
-
-input {
-    // -webkit-border-radius: 20px;
-    // -moz-border-radius: 20px;
-    border-radius: 40px;
-    border       : 1px solid #88e3e0;
-    color        : #000000;
-    width        : 350px;
-    height       : 40px;
-    padding-left : 10px;
-}
-
-input:focus {
-    outline: none;
-    border : 2px solid #2d9fd9;
-    color  : #000000;
-}
-
-.container {
+    border-bottom-right-radius: 100px;
+    // display     : block;
+  
+    // margin-left : 0;
+    // margin-right: 0;
+    // transform   : translate(0px, -100px) !important;
+  
+  }
+  
+  .container {
     display        : flex;
     justify-content: center;
     align-items    : center;
-    margin-top     : 60px;
+    margin-top     : 3%;
+  }
+  
+  .login {
+    // padding-left : 120px;
+    // padding-right: 120px;
+    padding-top     : 15px;
+    padding-bottom  : 15px;
+    width           : 330px;
+    border-radius   : 30px;
+    border          : 2px solid #0089d3;
+    background-color: white;
+    font-size       : 18px;
+    cursor          : pointer;
+    color           : #00A5FF;
+    font-weight     : bold;
+    //   display: block;
+  
+  }
+  
+  .rig {
+    // padding-left : 120px;
+    // padding-right: 120px;
+    padding-top     : 15px;
+    padding-bottom  : 15px;
+    width           : 330px;
+    border-radius   : 30px;
+    border          : 2px solid #0089d3;
+    background-color: #0089d3;
+    font-size       : 18px;
+    cursor          : pointer;
+    color           : #ffffff;
+    font-weight     : bold;
+    margin-top      : 22px;
+    //   display: block;
+  
+  }
+  
+  .lets {
+    // padding-left : 120px;
+    // padding-right: 120px;
+    padding-top     : 15px;
+    padding-bottom  : 15px;
+    width           : 330px;
+    border-radius   : 30px;
+    border          : 2px solid #1CC9C5;
+    background-color: white;
+    font-size       : 18px;
+    cursor          : pointer;
+    color           : #1CC9C5;
+    font-weight     : bold;
+    margin-top      : 22px;
+    //   display: block;
+  
+  }
+  
+  
+  .container2 {
+    position   : relative;
+    text-align : left;
+    color      : rgb(255, 255, 255);
+    font-weight: bold;
+    font-size  : 50px !important
+  }
+  
+  .bottom-left {
+    position: absolute;
+    bottom  : 30px;
+    left    : 16px;
+  
+  }
+  
+  .scroll {
+    overflow-x: hidden;
+  }
+  
+  ///////////////////////
+  
+// @import url('https://fonts.googleapis.com/css?family=Exo:500,600,700|Roboto&display=swap');
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mattoolbar1 {
+  background-color: #223a66;
+  height          : 50px;
+
+}
+
+.mattoolbar2 {
+  background-color: #f8f8f8;
+  height          : 50px;
+}
+
+.position-fixed {
+  position: fixed;
+  z-index : 1;
+}
+
+span {
+  font-weight: bold;
+}
+
+input {
+  // -webkit-border-radius: 20px;
+  // -moz-border-radius: 20px;
+  border-radius: 40px;
+  border       : 1px solid #88e3e0;
+  color        : #000000;
+  width        : 350px;
+  height       : 40px;
+  padding-left : 10px;
+}
+
+input:focus {
+  outline: none;
+  border : 2px solid #2d9fd9;
+  color  : #000000;
+}
+
+.container {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  margin-top     : 60px;
 }
 
 
 
 .toolbarNav {
-    position        : fixed;
-    bottom          : 0;
-    z-index         : 1000;
+  position        : fixed;
+  bottom          : 0;
+  z-index         : 1000;
+  display         : flex;
+  justify-content : space-around;
+  padding         : 2em;
+  background-color: white;
+
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow   : 3px 3px 5px 6px #ccc;
+  /* Firefox 3.5 - 3.6 */
+  box-shadow        : 2px 2px 4px 5px #ccc;
+  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+  button {
     display         : flex;
-    justify-content : space-around;
-    padding         : 2em;
+    flex-direction  : column;
+    align-items     : center;
+    width           : 100%;
     background-color: white;
+    color           : #c0c0c0;
 
-    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow   : 3px 3px 5px 6px #ccc;
-    /* Firefox 3.5 - 3.6 */
-    box-shadow        : 2px 2px 4px 5px #ccc;
-    /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
-
-    button {
-        display         : flex;
-        flex-direction  : column;
-        align-items     : center;
-        width           : 100%;
-        background-color: white;
-        color           : #c0c0c0;
-
-        span {
-            display       : block;
-            letter-spacing: 3px;
-        }
+    span {
+      display       : block;
+      letter-spacing: 3px;
     }
+  }
 }
 
 button:hover,
 .active-link {
-    color: #00a5ff !important;
+  color: #00a5ff !important;
 }
 
 mat-card {
-    background-color: white;
+  background-color: white;
 
-    width                 : 200px;
-    height                : 150px;
-    margin-right          : 5%;
-    margin-left           : 5%;
-    // margin-top         : 10%;
-    // margin-bottom   : 10%;
-    // box-shadow   : 2px 2px 4px 5px #ccc;
+  width                 : 200px;
+  height                : 150px;
+  margin-right          : 5%;
+  margin-left           : 5%;
+  // margin-top         : 10%;
+  // margin-bottom   : 10%;
+  // box-shadow   : 2px 2px 4px 5px #ccc;
 }
 
 // .content {
@@ -100,62 +200,161 @@ mat-card {
 // }
 
 .scroll {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 
-img {
-    border-bottom-left-radius: 20px;
-}
+// img {
+//   border-bottom-left-radius: 20px;
+// }
 
 .bottom-left {
-    position      : absolute;
-    bottom        : 150px;
-    left          : -7px;
-    position      : relative;
-    text-align    : left;
-    color         : rgb(255, 255, 255);
-    font-weight   : 500;
-    font-size     : 20px !important;
-    letter-spacing: 2px !important;
+  position      : absolute;
+  bottom        : 150px;
+  left          : -7px;
+  position      : relative;
+  text-align    : left;
+  color         : rgb(255, 255, 255);
+  font-weight   : 500;
+  font-size     : 20px !important;
+  letter-spacing: 2px !important;
 
 }
 
 // .container2 {
 .heading {
-    font-size  : 24px;
-    font-weight: bold;
-    margin-left: 5%;
-    width: 200px !important;
-    letter-spacing: 2px !important;
+  font-size     : 24px;
+  font-weight   : bold;
+  margin-left   : 5%;
+  width         : 200px !important;
+  letter-spacing: 2px !important;
 
 }
+
 .heading1 {
-    font-size  : 24px;
-    font-weight: bold;
-    margin-left: 3%;
-    width: 200px !important;
-    letter-spacing: 2px !important;
+  font-size     : 24px;
+  font-weight   : bold;
+  margin-left   : 3%;
+  width         : 200px !important;
+  letter-spacing: 2px !important;
 
 }
+
 .go {
-    font-size       : 14px;
-    text-align      : center;
-    font-weight     : bold;
-    background-color: #00a5ff;
-    border-radius   : 50px;
-    height          : 50px;
-    width           : 50px;
-    border          : 1px solid #00a5ff;
-    margin-left     : 40%;
-    color: rgb(255, 255, 255) !important;
+  font-size       : 14px;
+  text-align      : center;
+  font-weight     : bold;
+  background-color: #00a5ff;
+  border-radius   : 50px;
+  height          : 50px;
+  width           : 50px;
+  border          : 1px solid #00a5ff;
+  margin-left     : 40%;
+  color           : rgb(255, 255, 255) !important;
 
 }
 
 .go:hover {
-    color: rgb(255, 255, 255) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
-hr{
+hr {
+  color: black;
+}
+
+.drop {
+  border-radius   : 20px;
+  border          : 1px solid rgb(255, 255, 255);
+  background-color: white;
+  font-size: 14px;
+}
+
+.lblcolor {
+  color       : #223a66;
+  font-size   : 14px;
+  font-weight : 500;
+  padding-left: 20px;
+  cursor      : pointer;
+}
+
+.lblcolor:hover {
+  color       : #e12454;
+  font-size   : 14px;
+  font-weight : 500;
+  padding-left: 20px;
+}
+
+.bg-1 {
+  background     : url("./../../assets/images/med3.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  position       : relative;
+}
+
+.page-title {
+  padding : 100px 0px 100px 0px;
+  position: relative;
+}
+
+.page-title .block h1 {
+  color: #fff;
+}
+
+.page-title .block p {
+  color: #fff;
+}
+
+
+
+.overlay:before {
+  content   : "";
+  position  : absolute;
+  left      : 0;
+  top       : 0;
+  bottom    : 0;
+  right     : 0;
+  width     : 100%;
+  height    : 100%;
+  opacity   : 0.9;
+  background: #223a66;
+
+}
+
+.example-card {
+  width: 300px ;
+  height: auto;
+}
+
+.title-color {
+  color: #223a66;
+  font-family: "Exo", sans-serif;
+  font-weight: 700;
+  // line-height: 50px
+
+}
+  
+h2, .h2 {
+  font-size: 44px;
+}
+
+.cardhead{
+  font-family: "Exo", sans-serif;
+    font-weight: 700;
     color: black;
 }
+
+.cardcon{
+  font-size: 16px;
+    color: #6F8BA4;
+    font-weight: 400;
+    line-height: 30px;
+    font-family: "Exo", sans-serif;
+
+}
+
+.divider {
+  width     : 40px;
+  height    : 5px;
+  background: #e12454;
+}
+
+

@@ -1,0 +1,91 @@
+.ps-home--1 {
+  padding-bottom: 30px;
+}
+
+.ps-home--1 .ps-section--sellers {
+  padding-bottom: 80px;
+}
+
+.ps-home--1 .ps-promo {
+  padding-bottom: 50px;
+}
+
+.ps-home--1 .ps-promo.ps-not-padding {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.ps-home--1 .ps-promo.ps-not-padding .ps-promo__banner {
+  border-radius: 0;
+}
+
+.ps-home--1 .ps-section--category {
+  padding: 30px 0;
+}
+
+.ps-home--1 .ps-delivery {
+  margin: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--latest {
+  margin-bottom: 50px;
+}
+
+.ps-home--1 .ps-section--sellers {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--deals {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--featured {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--reviews {
+  margin: 30px 0 50px;
+  padding: 60px 10px 100px;
+}
+
+.ps-home--1 .ps-section--instagram {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--newsletter {
+  padding: 30px 0 60px;
+}
+
+@media (min-width: 768px) {
+  .ps-home--1 .ps-promo {
+    padding-top: 30px;
+  }
+  .ps-home--1 .ps-promo.ps-not-padding {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .ps-home--1 .ps-promo.ps-not-padding .ps-promo__banner {
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 992px) {
+  .ps-home--1 .ps-section--reviews {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .ps-home--1 .ps-section--reviews {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: 1350px) {
+  .ps-home--1 .ps-section--reviews {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
