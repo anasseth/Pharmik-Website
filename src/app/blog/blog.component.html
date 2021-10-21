@@ -1,4 +1,4 @@
-<!-- <div class="ps-blog">
+<div class="ps-blog" *ngIf="!show">
     <div class="container">
         <ul class="ps-breadcrumb">
             <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
@@ -18,9 +18,9 @@
                                 </div>
                             </div>
                             <div class="ps-blog__content">
-                                <div class="ps-blog__meta"> <span class="ps-blog__date">Jan 11, 2021</span><a
-                                        class="ps-blog__author" href="#">Alfredo Austin</a></div><a
-                                    class="ps-blog__title" href="blog-post1.html">The latest tests of popular masks in
+                                <div class="ps-blog__meta"> <span class="ps-blog__date">Jan 11,
+                                        2021</span><a class="ps-blog__author" href="#">Alfredo Austin</a></div>
+                                <a (click)="show =! show" class="ps-blog__title">The latest tests of popular masks in
                                     accordance with CV2s standards</a>
                                 <p class="ps-blog__desc">Lorem Ipsum has been the industry's standard dummy text ever
                                     since the 1500s, when an unknown printer took a galley of type and scrambled it to
@@ -541,9 +541,20 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 
-<div class="ps-post ps-post--sidebar">
+
+
+
+
+
+<!-- start child blog  -->
+<!-- start child blog  -->
+<!-- start child blog  -->
+
+
+
+<div class="ps-post ps-post--sidebar" *ngIf="show">
     <div class="container">
         <ul class="ps-breadcrumb">
             <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
@@ -1668,3 +1679,4 @@
             </div>
         </div>
     </section>
+</div>
