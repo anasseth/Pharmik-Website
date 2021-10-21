@@ -18,6 +18,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
 import { ShopComponent } from './shop/shop.component';
 import { FaqsComponent } from './faqs/faqs.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { FaqsComponent } from './faqs/faqs.component';
     BlogComponent,
     ShopComponent,
     FaqsComponent,
+    HeaderComponent,
+    FooterComponent,
     // MatToolbarModule,
 
   ],

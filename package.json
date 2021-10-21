@@ -24,7 +24,10 @@
     "bootstrap": "^3.4.1",
     "font-awesome": "^4.7.0",
     "material-icons": "^1.5.0",
+    "ng-select2": "^1.2.8",
+    "ng2-nouislider": "^1.8.3",
     "ngx-owl-carousel-o": "^6.0.0",
+    "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"
