@@ -1,22 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-
 
 @Component({
-  selector: 'app-loginpage',
-  templateUrl: './loginpage.component.html',
-  styleUrls: ['./loginpage.component.scss']
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.scss']
 })
-export class LoginpageComponent implements OnInit {
+export class HeaderComponent implements OnInit {
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
-
-
   Goto() {
     this.router.navigate(['/Aboutus']);
     console.log("afnan")
@@ -47,24 +42,4 @@ export class LoginpageComponent implements OnInit {
 
 
   }
-  customOptions: OwlOptions = {
-    loop: true,
-    autoplay: true,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    autoHeight: false,
-    autoWidth: false,
-    dots: false,
-    navSpeed: 7000,
-    nav: true,
-    navText: ['', ''],
-    items: 1,
-    // margin: 10,
-    responsive: {
-      0: {
-        items: 1
-      }
-    },
-}
 }
