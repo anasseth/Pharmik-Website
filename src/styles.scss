@@ -12761,13 +12761,15 @@ textarea.form-control {
   text-align: right;
 }
 
+// edit by afnan
 .mega-menu {
   background-color: #fff;
-  width: 100%;
+  width: 15%;
   padding-top: 20px;
   padding-bottom: 50px;
   z-index: 100;
-  box-shadow: 0 5px 5px #f0f2f5;
+  margin-left: 5%;
+  box-shadow: 0 5px 5px #95999e;
 }
 
 .mega-menu > * {
