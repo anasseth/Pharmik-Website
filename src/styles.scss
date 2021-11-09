@@ -14386,8 +14386,9 @@ textarea.form-control {
   margin-right: 0;
 }
 
+// blue theme work header icon
 .ps-header .ps-language-currency .ps-dropdown-value:hover {
-  color: #FD8D27;
+  color: #198ae3;
 }
 
 .ps-header .ps-language-currency .ps-dropdown-value::after {
@@ -14408,6 +14409,7 @@ textarea.form-control {
   display : inline-block;
   position: relative;
 }
+// blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item {
   position       : relative;
@@ -14417,8 +14419,9 @@ textarea.form-control {
   display        : inline-flex;
   justify-content: center;
   align-items    : center;
-  color          : #FD8D27;
+  color          : #223a66;
 }
+// blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item .badge {
   position        : absolute;
@@ -14431,16 +14434,18 @@ textarea.form-control {
   display         : flex;
   align-items     : center;
   justify-content : center;
-  background-color: #103178;
+  background-color: #198ae3;
   color           : white;
 }
+// blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item i {
-  font-weight: 500;
+  font-weight: bold;
 }
+// blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item:hover {
-  color: #103178;
+  color: #198ae3;
 }
 
 .ps-header .header__search-mini {
