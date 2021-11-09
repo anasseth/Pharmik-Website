@@ -5219,21 +5219,21 @@ textarea.form-control {
   margin-top   : 15px;
   border       : 1px solid #103178;
 }
-
+// blue theme work homepage
 .ps-banner .ps-banner__shop.bg-warning:hover {
-  color           : #FD8D27 !important;
+  color           : #198ae3 !important;
   background-color: white !important;
 }
 
 .ps-banner .ps-banner__shop.bg-yellow:hover {
-  color           : #FFC800 !important;
+  color           : #198ae3 !important;
   background-color: white !important;
 }
 
 .ps-banner .ps-banner__shop.bg-white:hover {
   color           : white;
-  border-color    : #103178;
-  background-color: #103178 !important;
+  border-color    : #198ae3;
+  background-color: #198ae3 !important;
 }
 
 .ps-banner .ps-banner__shop.bg-primary:hover {
@@ -5316,26 +5316,29 @@ textarea.form-control {
   height: 200px;
 }
 
+// blue theme work home page
 .ps-banner .bg-warning {
   color           : white;
-  background-color: #FD8D27 !important;
-  border-color    : #FD8D27;
+  background-color: #0091ff !important;
+  border-color    : #0091ff;
 }
 
+
+
 .ps-banner .bg-yellow {
-  color           : #103178;
-  background-color: #FFC800 !important;
+  color           : #ffffff;
+  background-color: #0091ff !important;
   border-color    : #FFC800;
 }
 
 .ps-banner .bg-white {
-  color           : #103178;
+  color           : #0091ff;
   background-color: white;
   border-color    : white;
 }
-
+// blue theme work homepage
 .ps-banner .bg-primary {
-  background-color: #103178 !important;
+  background-color: #198ae3 !important;
   color           : white;
   border-color    : #103178;
 }
@@ -5353,11 +5356,11 @@ textarea.form-control {
 }
 
 .ps-banner .text-warning {
-  color: #FD8D27 !important;
+  color: #0091ff !important;
 }
 
 .ps-banner .text-yellow {
-  color: #FFC800 !important;
+  color: #0091ff !important;
 }
 
 .ps-banner .ps-logo {
@@ -14409,6 +14412,7 @@ textarea.form-control {
   display : inline-block;
   position: relative;
 }
+
 // blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item {
@@ -14421,6 +14425,7 @@ textarea.form-control {
   align-items    : center;
   color          : #223a66;
 }
+
 // blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item .badge {
@@ -14437,11 +14442,13 @@ textarea.form-control {
   background-color: #198ae3;
   color           : white;
 }
+
 // blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item i {
   font-weight: bold;
 }
+
 // blue theme work header icon
 
 .ps-header .ps-header__icons .ps-header__item:hover {
@@ -16472,8 +16479,9 @@ textarea.form-control {
   color  : #5b6c8f;
 }
 
+// blue theme work header icon
 .ps-footer--block .ps-block__list li a:hover {
-  color: #FD8D27;
+  color: #198ae3;
 }
 
 .ps-footer--bottom {
@@ -16528,8 +16536,10 @@ textarea.form-control {
   font-weight : 600;
 }
 
+// blue theme work footer
+
 .ps-footer--top .ps-footer__link:hover {
-  color: #FD8D27;
+  color: #198ae3;
 }
 
 @media (min-width: 768px) {
@@ -16600,8 +16610,10 @@ textarea.form-control {
   color        : #103178;
 }
 
+
+// blue theme work header icon
 .ps-footer--contact .ps-footer__fax i {
-  color       : #FD8D27;
+  color       : #198ae3;
   margin-right: 15px;
   font-size   : 20px;
   font-weight : bold;
@@ -16624,9 +16636,12 @@ textarea.form-control {
   font-size  : 16px;
 }
 
+// blue theme work footer
 .ps-footer--contact .ps-footer__email i {
   margin-right: 15px;
   font-weight : bold;
+  color      : #198ae3;
+
 }
 
 @media (min-width: 768px) {
