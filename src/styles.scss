@@ -3046,12 +3046,16 @@ textarea.form-control {
   margin-left: 10px;
 }
 
+// blue theme phar shop rating
 .ps-widget--product .ps-widget__item .custom-label {
   display     : flex;
   font-size   : 14px;
-  padding-left: 10px;
+  padding-left: 20px;
   color       : #103178;
   font-size   : 16px;
+  transform: translate(0px,-25px);
+  // overflow-x: hidden !important;
+  // vertical-align: middle !important;
 }
 
 .ps-widget--product .ps-widget__item .custom-label span {
