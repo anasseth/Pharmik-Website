@@ -746,16 +746,16 @@ body {
     display: inline-block;
   }
 }
-
+// blue theme work homepage
 .ps-btn--warning {
-  border          : 1px solid #FD8D27 !important;
-  background-color: #FD8D27 !important;
+  border          : 1px solid #198ae3 !important;
+  background-color: #198ae3 !important;
   color           : white !important;
 }
 
 .ps-btn--warning:hover {
   background-color: white !important;
-  color           : #FD8D27 !important;
+  color           : #198ae3 !important;
 }
 
 .ps-btn--primary {
@@ -3390,8 +3390,9 @@ textarea.form-control {
   background-color: #f00000;
 }
 
+// blue theme work homepage
 .ps-badge.ps-badge--sale {
-  background-color: #FD8D27;
+  background-color: #198ae3;
 }
 
 .ps-badge.ps-badge--new {
@@ -5320,7 +5321,7 @@ textarea.form-control {
 .ps-banner .bg-warning {
   color           : white;
   background-color: #0091ff !important;
-  border-color    : #0091ff;
+  border-color    : white;
 }
 
 
@@ -5328,7 +5329,7 @@ textarea.form-control {
 .ps-banner .bg-yellow {
   color           : #ffffff;
   background-color: #0091ff !important;
-  border-color    : #FFC800;
+  border-color    : white;
 }
 
 .ps-banner .bg-white {
@@ -7228,22 +7229,23 @@ textarea.form-control {
 .ps-promo .ps-promo__name.mb-20 {
   margin-bottom: 20px;
 }
-
+// blue theme work homepage
 .ps-promo .ps-promo__btn {
   display         : inline-block;
-  background-color: #103178;
+  background-color: #198ae3;
   color           : white;
   padding         : 0px 25px;
   font-size       : 14px;
   font-weight     : 600;
   border-radius   : 40px;
-  border          : 1px solid #103178;
+  border          : 1px solid #198ae3;
   line-height     : 26px;
 }
 
 .ps-promo .ps-promo__btn:hover {
-  background-color: #FD8D27;
-  border-color    : #FD8D27;
+  background-color: white;
+  border-color    : white;
+  color: #198ae3;
 }
 
 .ps-promo .ps-promo__sale {
@@ -8762,9 +8764,9 @@ textarea.form-control {
   background-size    : cover;
   border-radius      : 4px;
 }
-
+// blue theme work homepage
 .ps-delivery .ps-delivery__text {
-  color      : #12a05c;
+  color      : #198ae3;
   font-size  : 22px;
   line-height: 26px;
   display    : inline-flex;
@@ -8775,10 +8777,10 @@ textarea.form-control {
   font-weight : bold;
   margin-right: 10px;
 }
-
+// blue theme work homepage
 .ps-delivery .ps-delivery__more {
-  background-color: #12a05c;
-  border          : 1px solid #12a05c;
+  background-color: #198ae3;
+  border          : 1px solid white;
   font-size       : 18px;
   font-weight     : 500;
   color           : white;
@@ -8792,7 +8794,7 @@ textarea.form-control {
 
 .ps-delivery .ps-delivery__more:hover {
   background-color: white;
-  color           : #12a05c;
+  color           : #198ae3;
 }
 
 @media (min-width: 768px) {
@@ -8935,9 +8937,9 @@ textarea.form-control {
   display         : inline-block;
   font-weight     : 500;
 }
-
+// blue theme work homepage
 .ps-section--category .ps-category__more:hover {
-  background-color: #103178;
+  background-color: #198ae3;
   color           : white;
 }
 
@@ -8962,9 +8964,9 @@ textarea.form-control {
   color    : #103178;
   font-size: 16px;
 }
-
+// blue theme work homepage
 .ps-section--category .ps-category__list li a:hover {
-  color          : #FD8D27;
+  color          : #198ae3;
   text-decoration: underline;
 }
 
