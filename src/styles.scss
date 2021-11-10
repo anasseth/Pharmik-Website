@@ -149,7 +149,7 @@ a {
 }
 
 a:hover {
-  color: #FD8D27;
+  color: #198ae3;
 }
 
 a,
@@ -2062,7 +2062,7 @@ textarea.form-control {
 }
 
 .ps-pagination .pagination .active a {
-  background-color: #103178;
+  background-color: #198ae3;
   color           : white;
   border-radius   : 50%;
 }
@@ -3020,9 +3020,9 @@ textarea.form-control {
 .ps-widget--product .ps-widget__item {
   padding: 8px 0;
 }
-
+// blue phar theme for shop
 .ps-widget--product .ps-widget__item .custom-control-label {
-  display     : flex;
+  // display     : flex;
   font-size   : 14px;
   padding-left: 10px;
   color       : #103178;
@@ -4859,7 +4859,7 @@ textarea.form-control {
   font-size  : 22px;
   font-weight: bold;
   line-height: 30px;
-  color      : #FD8D27;
+  color      : #198ae3;
 }
 
 .ps-product--list .ps-product__meta {
@@ -9299,7 +9299,7 @@ textarea.form-control {
 }
 
 .ps-categogy .ps-categogy__type {
-  padding     : 14px 30px 14px 0;
+  padding     : 28px 30px 14px 0;
   margin-right: 30px;
   border-right: 1px solid #d9dee8;
   display     : none;
