@@ -7693,9 +7693,9 @@ textarea.form-control {
   width   : 100%;
   z-index : 10;
 }
-
+// blue phar theme for blog page
 .ps-blog--latset .ps-blog__badge .ps-badge__item {
-  background-color: #103178;
+  background-color: #198ae3;
   color           : white;
   font-weight     : 500;
   border-radius   : 40px;
@@ -11942,6 +11942,7 @@ textarea.form-control {
 }
 
 .ps-block--about .ps-block__icon {
+  color: #00aeef !important;
   margin-bottom: 20px;
 }
 
@@ -12159,8 +12160,8 @@ textarea.form-control {
 
 .ps-about .ps-about__banner .ps-banner__shop {
   font-size       : 16px;
-  border          : 1px solid #103178;
-  background-color: #103178;
+  border          : 1px solid #198ae3;
+  background-color: #198ae3;
   color           : white;
   font-weight     : 500;
   border-radius   : 40px;
