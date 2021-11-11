@@ -3504,14 +3504,15 @@ textarea.form-control {
 }
 
 .ps-product__price {
-  color        : #103178;
+  color        : #0091ff;
   margin-bottom: 5px;
-  font-weight  : 500;
+  font-weight  : bold;
   font-size    : 18px;
 }
-
+// blue theme work home page heading color
 .ps-product__price.sale {
-  color: #FD8D27;
+  color: #0091ff;
+  font-weight: bold;
 }
 
 .ps-product__del {
@@ -5172,11 +5173,11 @@ textarea.form-control {
   text-align: center;
   height    : 336px;
 }
-
+// blue phar theme main bannar color
 .ps-banner .ps-banner__title {
   font-weight  : 600;
   font-size    : 35px;
-  color        : #103178;
+  color        : #0091ff;
   line-height  : 42px;
   margin-bottom: 10px;
 }
@@ -5200,9 +5201,11 @@ textarea.form-control {
   position: relative;
 }
 
+// blue phar theme main bannar color
+
 .ps-banner .ps-banner__price span {
   font-size  : 40px;
-  color      : #FD8D27;
+  color      : #223a66;
   font-weight: 600;
 }
 
@@ -7221,9 +7224,10 @@ textarea.form-control {
   border-radius   : 40px;
   margin-bottom   : 5px;
 }
+// blue theme work homepage bannar color
 
 .ps-promo .ps-promo__name {
-  color        : #103178;
+  color        : #0091ff;
   margin-bottom: 5px;
   font-size    : 20px;
   font-weight  : 600;
@@ -7251,9 +7255,10 @@ textarea.form-control {
   border-color    : white;
   color: #198ae3;
 }
+// blue theme work homepage bannar color
 
 .ps-promo .ps-promo__sale {
-  color        : #FD8D27;
+  color        : #223a66;
   font-size    : 30px;
   margin-bottom: 10px;
   font-weight  : 600;
@@ -7261,7 +7266,7 @@ textarea.form-control {
 }
 
 .ps-promo .ps-promo__price {
-  color        : #FFC800;
+  color        : #0091ff;
   font-size    : 30px;
   font-weight  : 700;
   line-height  : 1.2;
@@ -8879,9 +8884,10 @@ textarea.form-control {
   }
 }
 
+// blue theme work home page heading color
 .ps-section--category .ps-section__title {
   font-weight  : bold;
-  color        : #103178;
+  color        : #0091ff;
   text-align   : center;
   font-size    : 22px;
   line-height  : 26px;
@@ -8919,10 +8925,11 @@ textarea.form-control {
   top           : 15px;
   left          : 15px;
 }
+// blue theme work home page heading color
 
 .ps-section--category .ps-category__name {
   margin-bottom: 14px;
-  color        : #103178;
+  color        : #223a66;
   font-size    : 18px;
   display      : block;
   font-weight  : bold;
@@ -8946,10 +8953,10 @@ textarea.form-control {
   background-color: #198ae3;
   color           : white;
 }
-
+// blue theme work home page heading color
 .ps-section--category .ps-category__title {
   font-weight  : bold;
-  color        : #103178;
+  color        : #0091ff;
   font-size    : 18px;
   line-height  : 26px;
   margin-bottom: 20px;
@@ -10213,12 +10220,12 @@ textarea.form-control {
     line-height: 30px;
   }
 }
-
+// blue theme work home page heading color
 .ps-section--featured .ps-section__title {
   margin-bottom: 20px;
   font-size    : 30px;
   line-height  : 34px;
-  color        : #103178;
+  color        : #0091ff;
   text-align   : center;
   font-weight  : 600;
 }
@@ -10491,12 +10498,12 @@ textarea.form-control {
   background-size    : cover;
   background-color   : #fdf6ed;
 }
-
+// blue theme work home page heading color
 .ps-section--reviews .ps-section__title {
   margin-bottom: 20px;
   font-size    : 30px;
   line-height  : 34px;
-  color        : #103178;
+  color        :#0091ff;
   text-align   : center;
   font-weight  : 600;
 }
@@ -10889,9 +10896,9 @@ textarea.form-control {
     margin-bottom: 30px;
   }
 }
-
+// blue theme work home page heading color
 .ps-section--instagram .ps-section__title {
-  color        : #103178;
+  color        : #0091ff;
   text-align   : center;
   margin-bottom: 20px;
   font-weight  : 500;
@@ -10961,7 +10968,7 @@ textarea.form-control {
 
 .ps-section--newsletter .ps-section__title {
   margin-bottom: 30px;
-  color        : #103178;
+  color        : #0091ff;
   font-size    : 30px;
   line-height  : 36px;
   text-align   : center;
@@ -13076,9 +13083,9 @@ textarea.form-control {
   margin : 5px 9px;
   display: inline-block;
 }
-
+// blue theme work home page heading color
 .ps-social__link {
-  color    : #5b6c8f;
+  color    : #0091ff;
   position : relative;
   font-size: 20px;
 }
@@ -16463,12 +16470,12 @@ textarea.form-control {
     padding-bottom: 0;
   }
 }
-
+// blue theme work home page heading color
 .ps-footer--block .ps-block__title {
   font-size    : 18px;
   line-height  : 26px;
   margin-bottom: 20px;
-  color        : #103178;
+  color        : #0091ff;
   font-weight  : 600;
 }
 
@@ -16608,13 +16615,13 @@ textarea.form-control {
   margin-bottom: 20px;
   color        : #103178;
 }
-
+// blue theme work home page contact color
 .ps-footer--contact .ps-footer__fax {
   margin-bottom: 5px;
   line-height  : 36px;
   font-size    : 22px;
   font-weight  : 600;
-  color        : #103178;
+  color        : #0091ff;
 }
 
 
