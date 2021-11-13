@@ -20,25 +20,30 @@ export class HeaderComponent implements OnInit {
   }
   Goto1() {
     this.router.navigate(['/Contactus']);
-    console.log("afnan")
+    // console.log("afnan")
 
 
   }
   Goto2() {
     this.router.navigate(['/Blog']);
-    console.log("afnan")
+    // console.log("afnan")
 
 
   }
   Goto3() {
     this.router.navigate(['/Shop']);
-    console.log("afnan")
+    // console.log("afnan")
 
 
   }
   Goto4() {
     this.router.navigate(['/Faqs']);
-    console.log("afnan")
+    // console.log("afnan")
+
+
+  } Goto5() {
+    this.router.navigate(['/Shoppingcart']);
+    // console.log("afnan")
 
 
   }

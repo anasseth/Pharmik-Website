@@ -21,6 +21,8 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 
 @NgModule({
@@ -35,6 +37,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     FaqsComponent,
     HeaderComponent,
     FooterComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
     // MatToolbarModule,
 
   ],
