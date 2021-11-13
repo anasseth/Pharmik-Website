@@ -8,7 +8,8 @@
         <div class="ps-checkout__content">
             <div class="ps-checkout__wapper">
                 <p class="ps-checkout__text">Returning customer? <a href="my-account.html">Click here to login</a></p>
-                <p class="ps-checkout__text">Have a coupon? <a href="shopping-cart.html">Click here to enter your code</a></p>
+                <p class="ps-checkout__text">Have a coupon? <a href="shopping-cart.html">Click here to enter your
+                        code</a></p>
             </div>
             <form action="do_action" method="post">
                 <div class="row">
@@ -16,12 +17,7 @@
                         <div class="ps-checkout__form">
                             <h3 class="ps-checkout__heading">Billing details</h3>
                             <div class="row">
-                                <div class="col-12">
-                                    <div class="ps-checkout__group">
-                                        <label class="ps-checkout__label">Email address *</label>
-                                        <input class="ps-input" type="email">
-                                    </div>
-                                </div>
+
                                 <div class="col-12 col-md-6">
                                     <div class="ps-checkout__group">
                                         <label class="ps-checkout__label">First name *</label>
@@ -34,17 +30,39 @@
                                         <input class="ps-input" type="text">
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 col-md-6">
+                                    <div class="ps-checkout__group">
+                                        <label class="ps-checkout__label">Email address *</label>
+                                        <input class="ps-input" type="email">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="ps-checkout__group">
+                                        <label class="ps-checkout__label">Mobile *</label>
+                                        <input class="ps-input" type="email">
+                                    </div>
+                                </div>
+                                <div class="col-12 ">
                                     <div class="ps-checkout__group">
                                         <label class="ps-checkout__label">Company name (optional)</label>
                                         <input class="ps-input" type="text">
                                     </div>
                                 </div>
+
                                 <div class="col-12">
                                     <div class="ps-checkout__group">
-                                        <label class="ps-checkout__label">Street address *</label>
-                                        <input class="ps-input mb-3" type="text" placeholder="House number and street name">
-                                        <input class="ps-input" type="text" placeholder="Apartment, suite, unit, etc. (optional)">
+                                        <label class="ps-checkout__label">Address line 1 *</label>
+                                        <input class="ps-input mb-3" type="text"
+                                            placeholder="House number and street name">
+                                        <!-- <input class="ps-input" type="text" placeholder="Apartment, suite, unit, etc. (optional)"> -->
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="ps-checkout__group">
+                                        <label class="ps-checkout__label">Address line 2 </label>
+                                        <!-- <input class="ps-input mb-3" type="text" placeholder="House number and street name"> -->
+                                        <input class="ps-input" type="text"
+                                            placeholder="Apartment, suite, unit, etc. (optional)">
                                     </div>
                                 </div>
                                 <div class="col-12 col-md-6">
@@ -61,13 +79,13 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="ps-checkout__group">
-                                        <label class="ps-checkout__label">County (optional)</label>
+                                        <label class="ps-checkout__label">County *</label>
                                         <input class="ps-input" type="text">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="ps-checkout__group">
-                                        <label class="ps-checkout__label">Phone *</label>
+                                        <label class="ps-checkout__label">Region / state *</label>
                                         <input class="ps-input" type="text">
                                     </div>
                                 </div>
@@ -75,16 +93,19 @@
                                     <div class="ps-checkout__group">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="create-account">
-                                            <label class="form-check-label" for="create-account">Create an account?</label>
+                                            <label class="form-check-label" for="create-account">Create an
+                                                account?</label>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-12 ps-hidden" data-for="create-account">
                                     <div class="ps-checkout__group">
-                                        <label class="ps-checkout__label ps-label--danger">Create account password *</label>
+                                        <label class="ps-checkout__label ps-label--danger">Create account password
+                                            *</label>
                                         <div class="input-group">
                                             <input class="form-control ps-input" type="password" placeholder="Password">
-                                            <div class="input-group-append"><a class="fa fa-eye-slash toogle-password" href="javascript: vois(0);"></a></div>
+                                            <div class="input-group-append"><a class="fa fa-eye-slash toogle-password"
+                                                    href="javascript: vois(0);"></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +113,8 @@
                                     <div class="ps-checkout__group">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="ship-address">
-                                            <label class="form-check-label" for="ship-address">Ship to a different address?</label>
+                                            <label class="form-check-label" for="ship-address">Ship to a different
+                                                address?</label>
                                         </div>
                                     </div>
                                 </div>
@@ -119,8 +141,10 @@
                                         <div class="col-12">
                                             <div class="ps-checkout__group">
                                                 <label class="ps-checkout__label">Street address *</label>
-                                                <input class="ps-input mb-3" type="text" placeholder="House number and street name">
-                                                <input class="ps-input" type="text" placeholder="Apartment, suite, unit, etc. (optional)">
+                                                <input class="ps-input mb-3" type="text"
+                                                    placeholder="House number and street name">
+                                                <input class="ps-input" type="text"
+                                                    placeholder="Apartment, suite, unit, etc. (optional)">
                                             </div>
                                         </div>
                                         <div class="col-12 col-md-6">
@@ -138,7 +162,9 @@
                                         <div class="col-12">
                                             <div class="ps-checkout__group">
                                                 <label class="ps-checkout__label">County (optional)</label>
-                                                <input class="ps-input" type="text">
+                                                <select class="ps-input" >
+                                                    <option>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -146,7 +172,8 @@
                                 <div class="col-12">
                                     <div class="ps-checkout__group">
                                         <label class="ps-checkout__label">Order notes (optional)</label>
-                                        <textarea class="ps-textarea" rows="7" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                        <textarea class="ps-textarea" rows="7"
+                                            placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -180,7 +207,8 @@
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" id="price-ship">
-                                        <label class="form-check-label" for="price-ship">Local Pickup: <span>$10.00</span></label>
+                                        <label class="form-check-label" for="price-ship">Local Pickup:
+                                            <span>$10.00</span></label>
                                     </div>
                                 </div>
                             </div>
@@ -194,18 +222,23 @@
                                         <input class="form-check-input" type="radio" id="payment" checked>
                                         <label class="form-check-label" for="payment">Check payments</label>
                                     </div>
-                                    <p class="ps-note">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                    <p class="ps-note">Please send a check to Store Name, Store Street, Store Town,
+                                        Store State / County, Store Postcode.</p>
                                 </div>
                                 <div class="paypal-method">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" id="paypal">
-                                        <label class="form-check-label" for="paypal"> PayPal <img src="img/AM_mc_vs_ms_ae_UK.png" alt=""><a href="https://www.paypal.com/uk/webapps/mpp/paypal-popup">What is PayPal?</a></label>
+                                        <label class="form-check-label" for="paypal"> PayPal <img
+                                                src="img/AM_mc_vs_ms_ae_UK.png" alt=""><a
+                                                href="https://www.paypal.com/uk/webapps/mpp/paypal-popup">What is
+                                                PayPal?</a></label>
                                     </div>
                                 </div>
                                 <div class="check-faq">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="agree-faq" checked>
-                                        <label class="form-check-label" for="agree-faq"> I have read and agree to the website terms and conditions *</label>
+                                        <label class="form-check-label" for="agree-faq"> I have read and agree to the
+                                            website terms and conditions *</label>
                                     </div>
                                 </div>
                                 <button class="ps-btn ps-btn--warning">Place order</button>
