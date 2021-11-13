@@ -1,91 +1,141 @@
 .ps-home--1 {
-    padding-bottom: 30px;
-  }
-  
-  .ps-home--1 .ps-section--sellers {
-    padding-bottom: 80px;
-  }
-  
+  padding-bottom: 30px;
+}
+
+.ps-home--1 .ps-section--sellers {
+  padding-bottom: 80px;
+}
+
+.ps-home--1 .ps-promo {
+  padding-bottom: 50px;
+}
+
+.ps-home--1 .ps-promo.ps-not-padding {
+  margin-left : -15px;
+  margin-right: -15px;
+}
+
+.ps-home--1 .ps-promo.ps-not-padding .ps-promo__banner {
+  border-radius: 0;
+}
+
+.ps-home--1 .ps-section--category {
+  padding: 30px 0;
+}
+
+.ps-home--1 .ps-delivery {
+  margin: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--latest {
+  margin-bottom: 50px;
+}
+
+.ps-home--1 .ps-section--sellers {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--deals {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--featured {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--reviews {
+  margin : 30px 0 50px;
+  padding: 60px 10px 100px;
+}
+
+.ps-home--1 .ps-section--instagram {
+  padding: 30px 0 50px;
+}
+
+.ps-home--1 .ps-section--newsletter {
+  padding: 30px 0 60px;
+}
+
+@media (min-width: 768px) {
   .ps-home--1 .ps-promo {
-    padding-bottom: 50px;
+    padding-top: 30px;
   }
-  
+
   .ps-home--1 .ps-promo.ps-not-padding {
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left : 0;
+    margin-right: 0;
   }
-  
+
   .ps-home--1 .ps-promo.ps-not-padding .ps-promo__banner {
-    border-radius: 0;
+    border-radius: 4px;
   }
-  
-  .ps-home--1 .ps-section--category {
-    padding: 30px 0;
-  }
-  
-  .ps-home--1 .ps-delivery {
-    margin: 30px 0 50px;
-  }
-  
-  .ps-home--1 .ps-section--latest {
-    margin-bottom: 50px;
-  }
-  
-  .ps-home--1 .ps-section--sellers {
-    padding: 30px 0 50px;
-  }
-  
-  .ps-home--1 .ps-section--deals {
-    padding: 30px 0 50px;
-  }
-  
-  .ps-home--1 .ps-section--featured {
-    padding: 30px 0 50px;
-  }
-  
+}
+
+@media (min-width: 992px) {
   .ps-home--1 .ps-section--reviews {
-    margin: 30px 0 50px;
-    padding: 60px 10px 100px;
+    padding-left : 20px;
+    padding-right: 20px;
   }
-  
-  .ps-home--1 .ps-section--instagram {
-    padding: 30px 0 50px;
+}
+
+@media (min-width: 1280px) {
+  .ps-home--1 .ps-section--reviews {
+    padding-left : 5px;
+    padding-right: 5px;
   }
-  
-  .ps-home--1 .ps-section--newsletter {
-    padding: 30px 0 60px;
+}
+
+@media (min-width: 1350px) {
+  .ps-home--1 .ps-section--reviews {
+    padding-left : 40px;
+    padding-right: 40px;
   }
-  
-  @media (min-width: 768px) {
-    .ps-home--1 .ps-promo {
-      padding-top: 30px;
-    }
-    .ps-home--1 .ps-promo.ps-not-padding {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .ps-home--1 .ps-promo.ps-not-padding .ps-promo__banner {
-      border-radius: 4px;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .ps-home--1 .ps-section--reviews {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  
-  @media (min-width: 1280px) {
-    .ps-home--1 .ps-section--reviews {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  }
-  
-  @media (min-width: 1350px) {
-    .ps-home--1 .ps-section--reviews {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-  }
+}
+
+// .ps-login--modal {
+//   background-color: white !important;
+//   width           : 300px !important;
+//   position        : absolute !important;
+//   top             : 100% !important;
+//   right           : -92px !important;
+//   z-index         : 10 !important;
+//   border-radius   : 3px !important;
+//   padding         : 35px 30px 30px 30px !important;
+//   overflow        : hidden !important;
+//   box-shadow      : 0 2px 5px 0 rgba(0, 0, 0, 0.26) !important;
+//   transition      : all .2s ease !important;
+//   opacity         : 0 !important;
+//   transform-origin: right top 0 !important;
+//   transform       : scale(0) !important;
+// }
+
+// .ps-login--modal.active {
+//   opacity         : 1 !important;
+//   transform-origin: right top 0 !important;
+//   transform       : scale(1) !important;
+// }
+
+// .ps-login--modal .form-control {
+//   background-color: #f0f2f5 !important; 
+//   border-radius   : 50px !important;
+//   color           : #5b6c8f !important;
+//   font-size       : 18px !important;
+//   padding         : 10px 25px !important;
+//   line-height     : 26px !important;
+//   height          : 46px !important;
+// }
+
+// .ps-login--modal .form-group {
+//   margin-bottom: 20px !important; 
+// }
+
+// .ps-login--modal label {
+//   font-size    : 16px !important;
+//   color        : #5b6c8f !important;
+//   margin-bottom: 5px !important; 
+// }
+
+// .ps-login--modal .form-check label {
+//   margin-top : 8px !important;
+//   margin-left: 10px !important;
+// }

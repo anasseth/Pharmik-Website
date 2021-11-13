@@ -746,6 +746,7 @@ body {
     display: inline-block;
   }
 }
+
 // blue theme work homepage
 .ps-btn--warning {
   border          : 1px solid #198ae3 !important;
@@ -2132,6 +2133,7 @@ textarea.form-control {
   margin-bottom: 30px;
   padding      : 0 15px;
 }
+
 // blue theme work about us page heading color
 .ps-section--block-grid .ps-section__title {
   font-size    : 26px;
@@ -2939,6 +2941,7 @@ textarea.form-control {
   display : none;
   overflow: auto;
 }
+
 // blue theme work shop paroduct page heading color
 .ps-widget .ps-widget__title {
   color        : #198ae3;
@@ -3022,6 +3025,7 @@ textarea.form-control {
 .ps-widget--product .ps-widget__item {
   padding: 8px 0;
 }
+
 // blue phar theme for shop
 .ps-widget--product .ps-widget__item .custom-control-label {
   // display     : flex;
@@ -3050,12 +3054,12 @@ textarea.form-control {
 
 // blue theme phar shop rating
 .ps-widget--product .ps-widget__item .custom-label {
-  display     : flex;
-  font-size   : 14px;
-  padding-left: 20px;
-  color       : #103178;
-  font-size   : 16px;
-  transform: translate(0px,-25px);
+  display          : flex;
+  font-size        : 14px;
+  padding-left     : 20px;
+  color            : #103178;
+  font-size        : 16px;
+  transform        : translate(0px, -25px);
   // overflow-x: hidden !important;
   // vertical-align: middle !important;
 }
@@ -3511,9 +3515,10 @@ textarea.form-control {
   font-weight  : bold;
   font-size    : 18px;
 }
+
 // blue theme work home page heading color
 .ps-product__price.sale {
-  color: #0091ff;
+  color      : #0091ff;
   font-weight: bold;
 }
 
@@ -5175,6 +5180,7 @@ textarea.form-control {
   text-align: center;
   height    : 336px;
 }
+
 // blue phar theme main bannar color
 .ps-banner .ps-banner__title {
   font-weight  : 600;
@@ -5229,6 +5235,7 @@ textarea.form-control {
   margin-top   : 15px;
   border       : 1px solid #103178;
 }
+
 // blue theme work homepage
 .ps-banner .ps-banner__shop.bg-warning:hover {
   color           : #198ae3 !important;
@@ -5346,6 +5353,7 @@ textarea.form-control {
   background-color: white;
   border-color    : white;
 }
+
 // blue theme work homepage
 .ps-banner .bg-primary {
   background-color: #198ae3 !important;
@@ -7227,6 +7235,7 @@ textarea.form-control {
   border-radius   : 40px;
   margin-bottom   : 5px;
 }
+
 // blue theme work homepage bannar color
 
 .ps-promo .ps-promo__name {
@@ -7240,6 +7249,7 @@ textarea.form-control {
 .ps-promo .ps-promo__name.mb-20 {
   margin-bottom: 20px;
 }
+
 // blue theme work homepage
 .ps-promo .ps-promo__btn {
   display         : inline-block;
@@ -7256,8 +7266,9 @@ textarea.form-control {
 .ps-promo .ps-promo__btn:hover {
   background-color: white;
   border-color    : white;
-  color: #198ae3;
+  color           : #198ae3;
 }
+
 // blue theme work homepage bannar color
 
 .ps-promo .ps-promo__sale {
@@ -7701,6 +7712,7 @@ textarea.form-control {
   width   : 100%;
   z-index : 10;
 }
+
 // blue phar theme for blog page
 .ps-blog--latset .ps-blog__badge .ps-badge__item {
   background-color: #198ae3;
@@ -7768,7 +7780,7 @@ textarea.form-control {
 }
 
 .ps-blog--latset .ps-blog__title:hover {
-  color: #FD8D27;
+  color: #223a66;
 }
 
 .ps-blog--latset .ps-blog__desc {
@@ -8185,10 +8197,10 @@ textarea.form-control {
   transform       : scale(0);
 }
 
-.ps-login--modal.active {
-  opacity         : 1;
-  transform-origin: right top 0;
-  transform       : scale(1);
+.ps-login--modal:active {
+  opacity         : 1 !important;
+  transform-origin: right top 0 !important;
+  transform       : scale(1) !important;
 }
 
 .ps-login--modal .form-control {
@@ -8421,6 +8433,7 @@ textarea.form-control {
   padding-bottom: 80px;
   border-bottom : 1px solid #f0f2f5;
 }
+
 // blue theme work contact us page heading color
 .ps-form--contact .ps-form__title {
   color        : #198ae3;
@@ -8777,6 +8790,7 @@ textarea.form-control {
   background-size    : cover;
   border-radius      : 4px;
 }
+
 // blue theme work homepage
 .ps-delivery .ps-delivery__text {
   color      : #198ae3;
@@ -8790,6 +8804,7 @@ textarea.form-control {
   font-weight : bold;
   margin-right: 10px;
 }
+
 // blue theme work homepage
 .ps-delivery .ps-delivery__more {
   background-color: #198ae3;
@@ -8929,6 +8944,7 @@ textarea.form-control {
   top           : 15px;
   left          : 15px;
 }
+
 // blue theme work home page heading color
 
 .ps-section--category .ps-category__name {
@@ -8952,11 +8968,13 @@ textarea.form-control {
   display         : inline-block;
   font-weight     : 500;
 }
+
 // blue theme work homepage
 .ps-section--category .ps-category__more:hover {
   background-color: #198ae3;
   color           : white;
 }
+
 // blue theme work home page heading color
 .ps-section--category .ps-category__title {
   font-weight  : bold;
@@ -8979,6 +8997,7 @@ textarea.form-control {
   color    : #103178;
   font-size: 16px;
 }
+
 // blue theme work homepage
 .ps-section--category .ps-category__list li a:hover {
   color          : #198ae3;
@@ -9233,6 +9252,7 @@ textarea.form-control {
     line-height: 30px;
   }
 }
+
 // blue theme work shop product page heading color
 .ps-categogy .ps-categogy__name {
   color      : #0091ff;
@@ -10224,6 +10244,7 @@ textarea.form-control {
     line-height: 30px;
   }
 }
+
 // blue theme work home page heading color
 .ps-section--featured .ps-section__title {
   margin-bottom: 20px;
@@ -10502,12 +10523,13 @@ textarea.form-control {
   background-size    : cover;
   background-color   : #fdf6ed;
 }
+
 // blue theme work home page heading color
 .ps-section--reviews .ps-section__title {
   margin-bottom: 20px;
   font-size    : 30px;
   line-height  : 34px;
-  color        :#0091ff;
+  color        : #0091ff;
   text-align   : center;
   font-weight  : 600;
 }
@@ -10900,6 +10922,7 @@ textarea.form-control {
     margin-bottom: 30px;
   }
 }
+
 // blue theme work home page heading color
 .ps-section--instagram .ps-section__title {
   color        : #0091ff;
@@ -11222,6 +11245,7 @@ textarea.form-control {
 .ps-section--blog .ps-section__item {
   padding: 0 15px;
 }
+
 // blue theme work blog page heading color
 
 .ps-blog .ps-blog__title {
@@ -11954,7 +11978,7 @@ textarea.form-control {
 }
 
 .ps-block--about .ps-block__icon {
-  color: #00aeef !important;
+  color        : #198ae3 !important;
   margin-bottom: 20px;
 }
 
@@ -11966,11 +11990,12 @@ textarea.form-control {
 .ps-block--about .ps-block__icon:hover img {
   filter: grayscale(1);
 }
+
 // blue theme work about us page heading color
 .ps-block--about .ps-block__title {
   font-size  : 19px;
   line-height: 26px;
-  color      :#198ae3;
+  color      : #198ae3;
   font-weight: 600;
 }
 
@@ -12133,6 +12158,7 @@ textarea.form-control {
 .ps-about .ps-about__content {
   overflow: hidden;
 }
+
 // blue theme work about us page heading color
 .ps-about .ps-about__title {
   font-size    : 34px;
@@ -12154,6 +12180,7 @@ textarea.form-control {
   color     : white;
   min-height: 300px;
 }
+
 // blue theme work about us page heading color
 .ps-about .ps-about__banner .ps-banner__title {
   font-size    : 30px;
@@ -12297,6 +12324,7 @@ textarea.form-control {
 .ps-contact .ps-contact__content {
   padding: 20px 0 50px;
 }
+
 // blue theme work contact us page heading color
 
 .ps-contact .ps-contact__title {
@@ -12314,6 +12342,7 @@ textarea.form-control {
   color        : #5b6c8f;
   margin-bottom: 20px;
 }
+
 // blue theme work contact us page heading color
 
 .ps-contact .ps-contact__fax {
@@ -12553,6 +12582,7 @@ textarea.form-control {
     width: 50%;
   }
 }
+
 // blue work theme on checkout
 .ps-checkout .ps-checkout__title {
   color      : #198ae3;
@@ -13092,6 +13122,7 @@ textarea.form-control {
   margin : 5px 9px;
   display: inline-block;
 }
+
 // blue theme work home page heading color
 .ps-social__link {
   color    : #0091ff;
@@ -16479,6 +16510,7 @@ textarea.form-control {
     padding-bottom: 0;
   }
 }
+
 // blue theme work home page heading color
 .ps-footer--block .ps-block__title {
   font-size    : 18px;
@@ -16624,6 +16656,7 @@ textarea.form-control {
   margin-bottom: 20px;
   color        : #103178;
 }
+
 // blue theme work home page contact color
 .ps-footer--contact .ps-footer__fax {
   margin-bottom: 5px;
@@ -16663,7 +16696,7 @@ textarea.form-control {
 .ps-footer--contact .ps-footer__email i {
   margin-right: 15px;
   font-weight : bold;
-  color      : #198ae3;
+  color       : #198ae3;
 
 }
 
