@@ -758,10 +758,11 @@ body {
   color           : #198ae3 !important;
 }
 
+// blue work theme on shopping cart
 .ps-btn--primary {
-  border          : 1px solid #103178 !important;
-  background-color: #103178 !important;
-  color           : white !important;
+  border          : 1px solid #e3f2fd !important;
+  background-color: #e3f2fd !important;
+  color           : #198ae3 !important;
 }
 
 .ps-btn--primary:hover {
@@ -1838,8 +1839,9 @@ textarea.form-control {
   box-shadow: none;
 }
 
+// blue theme work on shopping cart
 .form-check .form-check-input:checked+label:before {
-  background-color: #103178;
+  background-color: #198ae3;
 }
 
 .form-check .form-check-input:checked+label:after {
@@ -6468,8 +6470,9 @@ textarea.form-control {
   padding: 25px;
 }
 
+// blue work theme on shopping cart
 .ps-table--product .ps-product__subtotal {
-  color      : #103178;
+  color      : #198ae3;
   font-weight: 600;
   font-size  : 18px;
 }
@@ -7832,8 +7835,9 @@ textarea.form-control {
   margin-top    : 10px;
 }
 
+// blue theme work on shopping cart 
 .ps-shopping .ps-shopping__title {
-  color        : #103178;
+  color        : #198ae3;
   font-size    : 34px;
   line-height  : 40px;
   margin-bottom: 40px;
@@ -12549,9 +12553,9 @@ textarea.form-control {
     width: 50%;
   }
 }
-
+// blue work theme on checkout
 .ps-checkout .ps-checkout__title {
-  color      : #103178;
+  color      : #198ae3;
   font-size  : 34px;
   line-height: 40px;
 }
@@ -12587,8 +12591,9 @@ textarea.form-control {
   display      : block;
 }
 
+// blue work theme on checkout
 .ps-checkout .ps-checkout__heading {
-  color        : #103178;
+  color        : #198ae3;
   font-size    : 26px;
   line-height  : 30px;
   margin-bottom: 20px;
@@ -12640,8 +12645,9 @@ textarea.form-control {
   margin-bottom: 50px;
 }
 
+// blue theme work on checkout
 .ps-checkout .ps-checkout__order {
-  border       : 3px solid #FD8D27;
+  border       : 3px solid #198ae3;
   border-radius: 4px;
   padding      : 25px 20px 30px;
   margin-bottom: 50px;
