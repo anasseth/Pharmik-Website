@@ -60,8 +60,8 @@
                                     </a>
                                     <div class="ps-product__actions">
                                         <div class="ps-product__item" data-toggle="tooltip" data-placement="left"
-                                            title="Quick view"><a href="#" data-toggle="modal"
-                                                data-target="#popupQuickview"><i class="fa fa-search"></i></a></div>
+                                            title="Quick view"><a data-toggle="modal" data-target="#popupQuickview"><i
+                                                    class="fa fa-search" (click)="openModal()"></i></a></div>
                                     </div>
                                     <div class="ps-product__badge">
                                     </div>
@@ -1000,17 +1000,17 @@
 </div>
 
 
-  <div class="row">
-        <button (click)="openModal()">open my modal</button>
-        <modal #myModal >
-            <modal-header>
-                <h1>Modal header</h1>
-            </modal-header>
-            <modal-content>
-                Hello Modal!
-            </modal-content>
-            <modal-footer>
-                <button class="btn btn-primary" (click)="closeModal()">close</button>
-            </modal-footer>
-        </modal>
-    </div>
+<div class="row">
+    <!-- <button (click)="openModal()">open my modal</button> -->
+    <modal #myModal>
+        <modal-header>
+            <h1>Modal header</h1>
+        </modal-header>
+        <modal-content>
+            Hello Modal!
+        </modal-content>
+        <modal-footer>
+            <button class="btn btn-primary" (click)="closeModal()">close</button>
+        </modal-footer>
+    </modal>
+</div>
