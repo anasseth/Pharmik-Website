@@ -13332,7 +13332,7 @@ textarea.form-control {
 // edit by afnan
 .mega-menu {
   background-color: #fff;
-  width           : 55%;
+  width           : 15%;
   padding-top     : 20px;
   padding-bottom  : 50px;
   z-index         : 100;
@@ -13340,11 +13340,24 @@ textarea.form-control {
   box-shadow      : 0 5px 5px #95999e;
 }
 
+// edit by afnan
+// .mega-menu1:hover {
+//   background-color   : #fff;
+//   width              : 200px;
+//   padding-top        : 20px;
+//   padding-bottom     : 50px;
+//   z-index            : 100;
+//   margin-left        : 5%;
+//   box-shadow         : 0 5px 5px #95999e;
+// }
+
+
 .mega-menu>* {
   width    : 100%;
   min-width: 200px;
   padding  : 10px 15px;
 }
+
 
 // blue theme work
 .mega-menu h4 {
