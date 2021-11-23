@@ -3901,11 +3901,13 @@ textarea.form-control {
   margin-top   : 20px;
 }
 
+
+// for blue theme product detail pop up
 .ps-product--detail .ps-product__price {
   font-size  : 30px;
   font-weight: 600;
   line-height: 36px;
-  color      : #FD8D27;
+  color      : #103178;
 }
 
 .ps-product--detail .ps-product__del {
@@ -4502,11 +4504,11 @@ textarea.form-control {
 }
 
 .ps-product--gallery .ps-product__thumbnail {
-  display: none;
+  // display: none;
 }
 
 .ps-product--gallery .ps-gallery--image {
-  display: none;
+  // display: none;
 }
 
 .ps-product--gallery .ps-gallery--image .ps-gallery__item {
