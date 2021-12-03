@@ -14,21 +14,21 @@ export class ShopComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  openModal(){
+  openModal() {
     this.modalRef = this.modalService.open(this.myModal, {
-        size: "lg",
-        modalClass: 'mymodal',
-        hideCloseButton: false,
-        centered: false,
-        backdrop: true,
-        animation: true,
-        keyboard: false,
-        closeOnOutsideClick: true,
-        backdropClass: "modal-backdrop"
+      size: "lg",
+      modalClass: 'mymodal',
+      hideCloseButton: false,
+      centered: false,
+      backdrop: true,
+      animation: true,
+      keyboard: false,
+      closeOnOutsideClick: true,
+      backdropClass: "modal-backdrop"
     })
-}
-closeModal(){
+  }
+  closeModal() {
     this.modalService.close(this.modalRef);
     //or this.modalRef.close();
-}
+  }
 }
