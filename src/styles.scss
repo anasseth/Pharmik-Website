@@ -8352,6 +8352,7 @@ textarea.form-control {
     padding      : 11px 15px;
     margin       : 0;
     float        : left;
+    // margin-left: 20px !important;
   }
 
   .ps-form--newsletter .ps-btn {
@@ -14425,7 +14426,8 @@ textarea.form-control {
 
 .ps-header .ps-header__search {
   min-width: 500px;
-  display  : none;
+  // margin-right: 50px !important;
+  // display  : none;
 }
 
 .ps-header .ps-language-currency {
