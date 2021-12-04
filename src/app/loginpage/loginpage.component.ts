@@ -66,5 +66,25 @@ export class LoginpageComponent implements OnInit {
         items: 1
       }
     },
-}
+  }
+
+
+  Meddata: any[] = [{
+    name: "Med 1", url: './../../assets/images/bg1-removebg-preview.png', price: "$200"
+
+  },
+  {
+    name: "Med 2", url: './../../assets/images/bg2-removebg-preview.png', price: "$230"
+
+  }, {
+    name: "Med 3", url: './../../assets/images/bg3-removebg-preview.png', price: "$20"
+
+  }, {
+    name: "Med 4", url: './../../assets/images/bg4-removebg-preview.png', price: "$300"
+
+  },
+  {
+    name: "Med 5", url: './../../assets/images/bg5-removebg-preview.png', price: "$100"
+
+  },]
 }
