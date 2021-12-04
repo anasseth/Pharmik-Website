@@ -69,7 +69,7 @@ export class LoginpageComponent implements OnInit {
   }
 
 
-  Meddata: any[] = [{
+  Medidata: any[] = [{
     name: "Med 1", url: './../../assets/images/bg1-removebg-preview.png', price: "$200"
 
   },
@@ -85,6 +85,25 @@ export class LoginpageComponent implements OnInit {
   },
   {
     name: "Med 5", url: './../../assets/images/bg5-removebg-preview.png', price: "$100"
+
+  },
+  {
+    name: "Med 5", url: './../../assets/images/bg6-removebg-preview.png', price: "$100"
+
+  },
+  {
+    name: "Med 5", url: './../../assets/images/bg7-removebg-preview.png', price: "$100"
+
+  },
+  {
+    name: "Med 5", url: './../../assets/images/bg8-removebg-preview.png', price: "$100"
+
+  },
+  {
+    name: "Med 5", url: './../../assets/images/bg9-removebg-preview.png', price: "$100"
+
+  },{
+    name: "Med 5", url: './../../assets/images/bg10-removebg-preview.png', price: "$100"
 
   },]
 }
