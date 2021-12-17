@@ -56,7 +56,7 @@ export class LoginpageComponent implements OnInit {
     autoHeight: true,
     autoWidth: true,
     dots: false,
-    navSpeed: 7000,
+    navSpeed: 700,
     nav: true,
     navText: ['', ''],
     items: 1,
@@ -66,5 +66,5 @@ export class LoginpageComponent implements OnInit {
         items: 1
       }
     },
-}
+  }
 }
