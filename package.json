@@ -28,6 +28,7 @@
     "material-icons": "^1.5.0",
     "ng-select2": "^1.2.8",
     "ng2-nouislider": "^1.8.3",
+    "ngb-modal": "^1.0.5",
     "ngx-owl-carousel-o": "^6.0.0",
     "ngx-slick-carousel": "^0.5.1",
     "rxjs": "~6.6.0",

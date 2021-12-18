@@ -1,4 +1,3 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +22,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ModalModule } from 'ngb-modal';
+import { NgModule } from '@angular/core';
 
 
 @NgModule({
@@ -52,6 +53,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     BrowserAnimationsModule,
     MatGridListModule,
     CarouselModule,
+    ModalModule,
+
 
     // RouterModule.forRoot([
     //   { path: 'Dashboard', component: DashboardComponent },
