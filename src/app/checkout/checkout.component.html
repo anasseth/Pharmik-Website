@@ -1,14 +1,14 @@
 <div class="ps-checkout">
     <div class="container">
         <ul class="ps-breadcrumb">
-            <li class="ps-breadcrumb__item"><a href="index.html">Home</a></li>
+            <li class="ps-breadcrumb__item"><a>Home</a></li>
             <li class="ps-breadcrumb__item active" aria-current="page"> Checkout</li>
         </ul>
         <h3 class="ps-checkout__title"> Checkout</h3>
         <div class="ps-checkout__content">
             <div class="ps-checkout__wapper">
-                <p class="ps-checkout__text">Returning customer? <a href="my-account.html">Click here to login</a></p>
-                <p class="ps-checkout__text">Have a coupon? <a href="shopping-cart.html">Click here to enter your
+                <p class="ps-checkout__text">Returning customer? <a>Click here to login</a></p>
+                <p class="ps-checkout__text">Have a coupon? <a>Click here to enter your
                         code</a></p>
             </div>
             <form action="do_action" method="post">
@@ -104,8 +104,8 @@
                                             *</label>
                                         <div class="input-group">
                                             <input class="form-control ps-input" type="password" placeholder="Password">
-                                            <div class="input-group-append"><a class="fa fa-eye-slash toogle-password"
-                                                    href="javascript: vois(0);"></a></div>
+                                            <div class="input-group-append"><a
+                                                    class="fa fa-eye-slash toogle-password"></a></div>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@
                                                     <option value="saab">Saab</option>
                                                     <option value="mercedes">Mercedes</option>
                                                     <option value="audi">Audi</option>
-                                                  </select>
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
@@ -232,8 +232,7 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" id="paypal">
                                         <label class="form-check-label" for="paypal"> PayPal <img
-                                                src="img/AM_mc_vs_ms_ae_UK.png" alt=""><a
-                                                href="https://www.paypal.com/uk/webapps/mpp/paypal-popup">What is
+                                                src="img/AM_mc_vs_ms_ae_UK.png" alt=""><a>What is
                                                 PayPal?</a></label>
                                     </div>
                                 </div>
@@ -244,7 +243,7 @@
                                             website terms and conditions *</label>
                                     </div>
                                 </div>
-                                <button class="ps-btn ps-btn--warning">Place order</button>
+                                <button class="ps-btn ps-btn--warning" (click)="openModal()">Place order</button>
                             </div>
                         </div>
                     </div>
@@ -252,4 +251,25 @@
             </form>
         </div>
     </div>
+</div>
+
+<button (click)="openModal()">Place </button>
+
+<div class="row">
+    <modal #myModal>
+        <modal-header>
+        </modal-header>
+        <modal-content class="text-center ">
+            <div class="pt-5 pb-5">
+                <i style="font-size: 74px; color: green; padding-bottom: 5%;" class="fa fa-check-circle" aria-hidden="true"></i>
+                <h3>Order placed Successfully</h3>
+                <h3 style="color: rgb(44, 93, 255); padding-top: 5%;">Thank You for your Ordering</h3>
+
+            </div>
+        </modal-content>
+        <modal-footer>
+            <button class="btn btn-danger" (click)="closeModal()">close</button>
+        </modal-footer>
+    </modal>
+
 </div>
