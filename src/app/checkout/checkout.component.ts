@@ -18,8 +18,8 @@ export class CheckoutComponent implements OnInit {
     this.modalRef = this.modalService.open(this.myModal, {
       size: "md",
       modalClass: 'mymodal',
-      hideCloseButton: false,
-      centered: false,
+      hideCloseButton: true,
+      centered: true,
       backdrop: true,
       animation: true,
       keyboard: false,
