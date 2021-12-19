@@ -6,3 +6,43 @@
 //   padding   : 0;
 //   border    : 0;
 // }
+
+.fab {
+    width: 70px;
+    height: 70px;
+    // background-color: #198ae3;
+    background-color: #198ae3;
+    border-radius: 50%;
+    box-shadow: 0 6px 10px 0 #666;
+    font-size: 32px;
+    line-height: 45px;
+    color: white;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    bottom: 30px; 
+   transition: all 0.1s ease-in-out;
+   padding-top: 14px;
+   padding-right: 4px;
+   opacity: 0.5;
+ }
+ 
+ .fab:hover {
+    box-shadow: 0 6px 14px 0 #666;
+    transform: scale(1.05);
+    opacity: 1;
+    cursor: pointer;
+ }
+
+
+//  .col-md-9 {
+//     width: 75%;
+//     transform: translate(8px, -100px);
+// }
+
+@media (min-width: 992px){
+.col-md-9 {
+    width: 75%;
+    transform: translate(8px, -100px);
+}
+}
