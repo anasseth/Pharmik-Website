@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm, Validators, FormGroup } from '@angular/forms';
 import { Checkout } from '../Models/Checkout/Checkout-Model';
 import { CartService } from '../Service/Cart/cart.service';
 import { Router } from '@angular/router';
 import { CheckoutService } from '../Service/Checkout/checkout.service';
+import { ModalManager } from 'ngb-modal';
 
 @Component({
   selector: 'app-checkout',
@@ -11,6 +12,8 @@ import { CheckoutService } from '../Service/Checkout/checkout.service';
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit {
+  modalRef: any;
+  @ViewChild('myModal') myModal: any;
 
   billingAmount: any = 0;
   checkoutObject: any = {};
@@ -38,7 +41,8 @@ export class CheckoutComponent implements OnInit {
     public fb: FormBuilder,
     public _CartService: CartService,
     public _CheckoutService: CheckoutService,
-    public Router: Router
+    public Router: Router,
+    public modalService: ModalManager
   ) { }
 
   ngOnInit(): void {
@@ -130,5 +134,20 @@ export class CheckoutComponent implements OnInit {
     )
 
   }
-
+  openModal() {
+    this.modalRef = this.modalService.open(this.myModal, {
+      size: "md",
+      modalClass: 'mymodal',
+      hideCloseButton: true,
+      centered: true,
+      backdrop: true,
+      animation: true,
+      keyboard: false,
+      closeOnOutsideClick: true,
+      backdropClass: "modal-backdrop"
+    })
+  }
+  closeModal() {
+    this.modalService.close(this.modalRef);
+  }
 }
