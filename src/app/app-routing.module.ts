@@ -19,13 +19,6 @@ const routes: Routes = [
   { path: 'Faqs', component: FaqsComponent },
   { path: 'Shoppingcart', component: ShoppingCartComponent },
   { path: 'Checkout', component: CheckoutComponent }
-
-
-
-
-
-
-
 ];
 
 @NgModule({

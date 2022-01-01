@@ -24,7 +24,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ModalModule } from 'ngb-modal';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,8 +41,6 @@ import { NgModule } from '@angular/core';
     FooterComponent,
     ShoppingCartComponent,
     CheckoutComponent,
-    // MatToolbarModule,
-
   ],
   imports: [
     BrowserModule,
@@ -54,17 +53,11 @@ import { NgModule } from '@angular/core';
     MatGridListModule,
     CarouselModule,
     ModalModule,
-
-
-    // RouterModule.forRoot([
-    //   { path: 'Dashboard', component: DashboardComponent },
-    // ])
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  // exports: [
-  //   MatToolbarModule,
-
-  // ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

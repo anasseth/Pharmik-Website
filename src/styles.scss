@@ -3543,7 +3543,16 @@ textarea.form-control {
 .ps-product__del {
   color: #9babcd;
   margin-left: 5px;
-  text-decoration: line-through;
+  font-weight: 400;
+  font-size: 15px;
+}
+.del{
+text-decoration: line-through;
+font-weight: lighter;
+}
+.ps-product__desc {
+  color: #9babcd;
+  margin-left: 5px;
   font-weight: 400;
   font-size: 15px;
 }

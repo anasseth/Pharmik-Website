@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FaqsService } from '../Service/FAQ/faq.service';
 
 @Component({
   selector: 'app-faqs',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public _FAQService: FaqsService
+  ) { }
 
   ngOnInit(): void {
+    this._FAQService.getAllFAQs
   }
 
 }
