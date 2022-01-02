@@ -6,11 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  // Placecard: string[] = ['USA', 'Maldive', 'Turkey', 'Baku'];
 
   Placecard: any[] = [{
     name: "Arena beach Maldive", url: './../../assets/images/maldive.png',
-
   },
   {
     name: "Baku Azerbaijan", url: './../../assets/images/baku.png',
@@ -22,22 +20,6 @@ export class DashboardComponent implements OnInit {
     name: "Berlin Germany", url: './../../assets/images/Germany.png',
 
   },]
-  // }, {
-  //   name: "Berlin Germany", url: './../../assets/images/Germany.png',
-
-  // }, {
-  //   name: "Berlin Germany", url: './../../assets/images/Germany.png',
-
-  // }, {
-  //   name: "Berlin Germany", url: './../../assets/images/Germany.png',
-
-  // },
-
-
-
-
-
-
 
   constructor() { }
   ngOnInit(): void {

@@ -9,12 +9,14 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ShopComponent } from './shop/shop.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { BlogContentComponent } from './blog-content/blog-content.component';
 
 const routes: Routes = [
   { path: '', component: LoginpageComponent },
   { path: 'Contactus', component: ContactusComponent },
   { path: 'Aboutus', component: AboutusComponent },
   { path: 'Blog', component: BlogComponent },
+  { path: 'BlogContent/:title', component: BlogContentComponent },
   { path: 'Shop', component: ShopComponent },
   { path: 'Faqs', component: FaqsComponent },
   { path: 'Shoppingcart', component: ShoppingCartComponent },

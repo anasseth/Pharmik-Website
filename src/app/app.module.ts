@@ -15,6 +15,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
+import { BlogContentComponent } from './blog-content/blog-content.component';
 import { ShopComponent } from './shop/shop.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -35,6 +36,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AboutusComponent,
     ContactusComponent,
     BlogComponent,
+    BlogContentComponent,
     ShopComponent,
     FaqsComponent,
     HeaderComponent,
