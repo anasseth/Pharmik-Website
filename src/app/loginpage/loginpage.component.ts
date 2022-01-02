@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ProductsService } from '../Service/Product/product.service';
+import { NewsLetterService } from '../Service/NewLetter/news-letter.service';
 
 @Component({
   selector: 'app-loginpage',
@@ -10,9 +11,12 @@ import { ProductsService } from '../Service/Product/product.service';
 })
 export class LoginpageComponent implements OnInit {
 
+  userEmail: any;
+
   constructor(
     private router: Router,
     public _ProductService: ProductsService,
+    public _NewsLetterService: NewsLetterService
     // public _FAQService: FaqsService
   ) { }
 
@@ -94,4 +98,29 @@ export class LoginpageComponent implements OnInit {
   }, {
     name: "Med 5", url: './../../assets/images/bg10-removebg-preview.png', price: "$100"
   },]
+
+  setEmailValue(event: any) {
+    console.log(event.target.value)
+    this.userEmail = event.target.value
+  }
+
+  subscribeToNewsLetter() {
+    console.log(this.userEmail)
+    var userEmailObject = {
+      email: this.userEmail
+    }
+    if (this.userEmail != "" || this.userEmail != " ") {
+      this._NewsLetterService.postUserDataforNewsLetter(this.userEmail).subscribe(
+        data => {
+          console.log("Successfully Subscribed")
+        },
+        err => {
+          console.log(err)
+        }
+      )
+    }
+    else {
+      alert("Please Enter Correct Email Address")
+    }
+  }
 }

@@ -453,9 +453,16 @@
               <input
                 class="form-control ps-input"
                 type="email"
-                placeholder="Enter your email address"
+                [(ngModel)]="userEmail"
+                (change)="setEmailValue($event)"
+                placeholder="Enter your Email Address"
               />
-              <button class="ps-btn ps-btn--warning">Subscribe</button>
+              <button
+                class="ps-btn ps-btn--warning"
+                (click)="subscribeToNewsLetter()"
+              >
+                Subscribe
+              </button>
             </div>
           </div>
         </form>
