@@ -110,7 +110,7 @@ export class LoginpageComponent implements OnInit {
       email: this.userEmail
     }
     if (this.userEmail != "" || this.userEmail != " ") {
-      this._NewsLetterService.postUserDataforNewsLetter(this.userEmail).subscribe(
+      this._NewsLetterService.postUserDataforNewsLetter(userEmailObject).subscribe(
         data => {
           console.log("Successfully Subscribed")
         },

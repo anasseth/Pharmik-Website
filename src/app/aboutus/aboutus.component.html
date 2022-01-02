@@ -454,6 +454,7 @@
                 class="form-control ps-input"
                 type="email"
                 [(ngModel)]="userEmail"
+                [ngModelOptions]="{ standalone: true }"
                 (change)="setEmailValue($event)"
                 placeholder="Enter your Email Address"
               />

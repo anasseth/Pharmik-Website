@@ -24,9 +24,12 @@ export class AboutusComponent implements OnInit {
   }
 
   subscribeToNewsLetter() {
-    console.log("User Email : ", this.userEmail)
-    if (this.userEmail == "" || this.userEmail == " ") {
-      this._NewsLetterService.postUserDataforNewsLetter(this.userEmail).subscribe(
+    console.log(this.userEmail)
+    var userEmailObject = {
+      email: this.userEmail
+    }
+    if (this.userEmail != "" || this.userEmail != " ") {
+      this._NewsLetterService.postUserDataforNewsLetter(userEmailObject).subscribe(
         data => {
           console.log("Successfully Subscribed")
         },
@@ -39,5 +42,4 @@ export class AboutusComponent implements OnInit {
       alert("Please Enter Correct Email Address")
     }
   }
-
 }
