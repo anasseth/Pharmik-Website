@@ -174,7 +174,7 @@
                 <div class="ps-title">Subtotal</div>
               </div>
 
-              <div
+              <div 
                 class="ps-checkout__row ps-product"
                 *ngFor="let item of this._CartService.NewCart.items"
               >
@@ -304,4 +304,29 @@
       </form>
     </div>
   </div>
+</div>
+<button (click)="openModal()">Place </button>
+
+<div class="row">
+    <modal #myModal>
+        <modal-header  class="bghead">
+            <div>
+                <i class="fa fa-check-circle chk" aria-hidden="true"></i>
+            </div>
+
+
+        </modal-header>
+        <modal-content class="text-center ">
+            <div style="padding-top: 10%;">
+                <!-- <i style="font-size: 74px; color: #198ae3; padding-bottom: 5%;" class="fa fa-check-circle" aria-hidden="true"></i> -->
+                <h3>Order placed Successfully</h3>
+                <h3 style="color: rgb(44, 93, 255); padding-top: 5%;">Thank You for your Ordering</h3>
+
+            </div>
+        </modal-content>
+        <modal-footer>
+            <button class="btn btn-danger" (click)="closeModal()">close</button>
+        </modal-footer>
+    </modal>
+
 </div>
