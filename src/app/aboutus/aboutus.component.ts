@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NewsLetterService } from '../Service/NewLetter/news-letter.service';
 
 @Component({
   selector: 'app-aboutus',
@@ -8,16 +9,37 @@ import { Router } from '@angular/router';
 })
 export class AboutusComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  userEmail: any;
+
+  constructor(
+    private router: Router,
+    public _NewsLetterService: NewsLetterService
+  ) { }
 
   ngOnInit(): void {
   }
 
-//   Goto() {
-//     this.router.navigate(['/Aboutus']);
-//     console.log("afnan")
+  setEmailValue(event: any) {
+    this.userEmail = event.target.value
+  }
 
-// \
-//   }
-
+  subscribeToNewsLetter() {
+    console.log(this.userEmail)
+    var userEmailObject = {
+      email: this.userEmail
+    }
+    if (this.userEmail != "" || this.userEmail != " ") {
+      this._NewsLetterService.postUserDataforNewsLetter(userEmailObject).subscribe(
+        data => {
+          console.log("Successfully Subscribed")
+        },
+        err => {
+          console.log(err)
+        }
+      )
+    }
+    else {
+      alert("Please Enter Correct Email Address")
+    }
+  }
 }

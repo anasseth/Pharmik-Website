@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cart } from 'src/app/Models/Cart/Cart-Model';
+import { CartService } from 'src/app/Service/Cart/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,43 +10,37 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    public _CartService: CartService
+  ) { }
 
   ngOnInit(): void {
   }
+
   Goto() {
     this.router.navigate(['/Aboutus']);
     console.log("afnan")
-
-
   }
+
   Goto1() {
     this.router.navigate(['/Contactus']);
-    // console.log("afnan")
-
-
   }
+
   Goto2() {
     this.router.navigate(['/Blog']);
-    // console.log("afnan")
-
-
   }
+
   Goto3() {
     this.router.navigate(['/Shop']);
-    // console.log("afnan")
-
-
   }
+
   Goto4() {
     this.router.navigate(['/Faqs']);
-    // console.log("afnan")
-
-
-  } Goto5() {
-    this.router.navigate(['/Shoppingcart']);
-    // console.log("afnan")
-
-
   }
+
+  Goto5() {
+    this.router.navigate(['/Shoppingcart']);
+  }
+
 }

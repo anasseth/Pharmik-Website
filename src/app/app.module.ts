@@ -15,6 +15,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { BlogComponent } from './blog/blog.component';
+import { BlogContentComponent } from './blog-content/blog-content.component';
 import { ShopComponent } from './shop/shop.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -24,7 +25,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ModalModule } from 'ngb-modal';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,14 +36,13 @@ import { NgModule } from '@angular/core';
     AboutusComponent,
     ContactusComponent,
     BlogComponent,
+    BlogContentComponent,
     ShopComponent,
     FaqsComponent,
     HeaderComponent,
     FooterComponent,
     ShoppingCartComponent,
     CheckoutComponent,
-    // MatToolbarModule,
-
   ],
   imports: [
     BrowserModule,
@@ -54,18 +55,11 @@ import { NgModule } from '@angular/core';
     MatGridListModule,
     CarouselModule,
     ModalModule,
-    
-
-
-    // RouterModule.forRoot([
-    //   { path: 'Dashboard', component: DashboardComponent },
-    // ])
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  // exports: [
-  //   MatToolbarModule,
-
-  // ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
