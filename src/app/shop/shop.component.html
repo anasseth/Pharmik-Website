@@ -1637,7 +1637,16 @@
 
 </div>
 
-<div class="fab"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+<div class="fab" (click)="Goto5()"> <i class="fa fa-shopping-cart" aria-hidden="true">
+  <span class="badge">
+    {{
+    this._CartService.NewCart == undefined ||
+    this._CartService.NewCart == null
+    ? 0
+    : this._CartService.NewCart.items.length
+    }}
+  </span>
+</i>
 </div>
 <!-- <div class="modal fade" id="popupQuickview" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered ps-quickview">
