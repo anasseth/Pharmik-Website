@@ -101,3 +101,17 @@ table {
   background-color: red;
   color: white;
 }
+
+
+.ps-widget--product .menu--mobile .sub-toggle::before {
+  content: "";
+  color: #103178;
+  font-weight: bold;
+}
+
+.fil{
+  float:right;
+  transform: translate(-5px, -20px);
+  font-size: 14px; 
+   color: #198ae3;
+}

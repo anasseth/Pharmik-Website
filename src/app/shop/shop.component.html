@@ -13,9 +13,7 @@
         <div class="col-12 col-md-9">
           <div class="ps-categogy__wrapper">
             <div class="ps-categogy__type">
-              <a class="active"
-                ><img src="/../../assets/images/bars.svg" alt /></a
-              >
+              <a class="active"><img src="/../../assets/images/bars.svg" alt /></a>
               <!-- <a><img src="/../../assets/images/gird2.svg" alt /></a
               >
               <a><img src="/../../assets/images/gird3.svg" alt /></a
@@ -25,15 +23,9 @@
             <div class="ps-categogy__onsale">
               <form>
                 <div class="custom-control custom-checkbox">
-                  <input
-                    class="custom-control-input"
-                    type="checkbox"
-                    id="onSaleProduct"
-                    style="transform: translate(-5px, 5px)"
-                  />
-                  <label class="custom-control-label" for="onSaleProduct"
-                    >Show only products on sale</label
-                  >
+                  <input class="custom-control-input" type="checkbox" id="onSaleProduct"
+                    style="transform: translate(-5px, 5px)" />
+                  <label class="custom-control-label" for="onSaleProduct">Show only products on sale</label>
                 </div>
               </form>
             </div>
@@ -63,13 +55,10 @@
             </div>
           </div>
           <div class="ps-categogy--list">
-            <div
-              class="ps-product ps-product--list"
-              *ngFor="
+            <div class="ps-product ps-product--list" *ngFor="
                 let product of this._ProductService.allProductData;
                 let productIndex = index
-              "
-            >
+              ">
               <div class="ps-product__content">
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
@@ -78,15 +67,9 @@
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search" (click)="openModal()"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"
+                          (click)="openModal()"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -97,18 +80,12 @@
                     <a>{{ product.name }}</a>
                   </h5>
                   <div class="ps-product__rating">
-                    <select
-                      class="ps-rating"
-                      data-read-only="true"
-                      (change)="setPillTypeValue(product, $event, productIndex)"
-                    >
-                      <option
-                        *ngFor="
+                    <select class="ps-rating" data-read-only="true"
+                      (change)="setPillTypeValue(product, $event, productIndex)">
+                      <option *ngFor="
                           let pill of product.typesOfPill;
                           let pillIndex = index
-                        "
-                        [value]="pillIndex"
-                      >
+                        " [value]="pillIndex">
                         {{ pill.quantity }} pills for ${{ pill.our_price }}
                       </option>
                     </select>
@@ -124,57 +101,31 @@
                 </div>
               </div>
               <div class="ps-product__footer">
-                <div
-                  class="ps-product__meta"
-                  *ngFor="let pill of product.typesOfPill; let j = index"
-                >
+                <div class="ps-product__meta" *ngFor="let pill of product.typesOfPill; let j = index">
                   <div *ngIf="j == 0" [id]="j">
-                    <span class="ps-product__price sale"
-                      >${{ pill.our_price }}</span
-                    >
-                    <span class="ps-product__del"
-                      ><b class="del">${{ pill.our_price }} </b>
-                      <b class="ps-product_desc"
-                        >for {{ pill.quantity }} pills</b
-                      ></span
-                    >
+                    <span class="ps-product__price sale">${{ pill.our_price }}</span>
+                    <span class="ps-product__del"><b class="del">${{ pill.our_price }} </b>
+                      <b class="ps-product_desc">for {{ pill.quantity }} pills</b></span>
                   </div>
                 </div>
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      (click)="
+                    <button class="minus" (click)="
                         quantityChanged('decrement', product, $event.target)
-                      "
-                    >
+                      ">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      [(ngModel)]="product.quantity"
-                      [value]="product.quantity"
-                      type="number"
-                      id="quantityInputField"
-                    />
-                    <button
-                      class="plus"
-                      (click)="
+                    <input class="quantity" min="0" [(ngModel)]="product.quantity" [value]="product.quantity"
+                      type="number" id="quantityInputField" />
+                    <button class="plus" (click)="
                         quantityChanged('increment', product, $event.target)
-                      "
-                    >
+                      ">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    (click)="addToCart(product)"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart"
+                    (click)="addToCart(product)">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
                   <!-- <a class="ps-product__link">Add to wishlist</a
@@ -188,22 +139,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg2-removebg-preview.png"
-                        alt="alt"
-                      /><img src="/../../assets/images/017.jpg" alt="alt" />
+                      <img src="/../../assets/images/bg2-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/017.jpg" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge">
@@ -221,8 +163,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4" selected="selected">4</option>
-                      <option value="5">5</option></select
-                    ><span class="ps-product__review">(8 Reviews)</span>
+                      <option value="5">5</option>
+                    </select><span class="ps-product__review">(8 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -240,36 +182,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -278,25 +202,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg3-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg3-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg3-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg3-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -312,8 +224,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5" selected="selected">5</option></select
-                    ><span class="ps-product__review">(9 Reviews)</span>
+                      <option value="5" selected="selected">5</option>
+                    </select><span class="ps-product__review">(9 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -331,36 +243,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -369,25 +263,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg4-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg4-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg4-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg4-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -403,8 +285,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4" selected="selected">4</option>
-                      <option value="5">5</option></select
-                    ><span class="ps-product__review">(4 Reviews)</span>
+                      <option value="5">5</option>
+                    </select><span class="ps-product__review">(4 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -417,42 +299,23 @@
               </div>
               <div class="ps-product__footer">
                 <div class="ps-product__meta">
-                  <span class="ps-product__price sale">$60.39</span
-                  ><span class="ps-product__del">$89.99</span>
+                  <span class="ps-product__price sale">$60.39</span><span class="ps-product__del">$89.99</span>
                 </div>
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -461,22 +324,12 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg5-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg5-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -492,8 +345,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5" selected="selected">5</option></select
-                    ><span class="ps-product__review">(5 Reviews)</span>
+                      <option value="5" selected="selected">5</option>
+                    </select><span class="ps-product__review">(5 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -511,36 +364,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -549,25 +384,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg6-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg6-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg6-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg6-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -583,8 +406,8 @@
                       <option value="2">2</option>
                       <option value="3" selected="selected">3</option>
                       <option value="4">4</option>
-                      <option value="5">5</option></select
-                    ><span class="ps-product__review">(2 Reviews)</span>
+                      <option value="5">5</option>
+                    </select><span class="ps-product__review">(2 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -602,36 +425,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -640,25 +445,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg7-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg7-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg7-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg7-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge">
@@ -676,8 +469,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5" selected="selected">5</option></select
-                    ><span class="ps-product__review">(1 Reviews)</span>
+                      <option value="5" selected="selected">5</option>
+                    </select><span class="ps-product__review">(1 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -690,42 +483,23 @@
               </div>
               <div class="ps-product__footer">
                 <div class="ps-product__meta">
-                  <span class="ps-product__price sale">$77.65</span
-                  ><span class="ps-product__del">$80.65</span>
+                  <span class="ps-product__price sale">$77.65</span><span class="ps-product__del">$80.65</span>
                 </div>
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -734,25 +508,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg8-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg8-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg8-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg8-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge">
@@ -771,8 +533,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5" selected="selected">5</option></select
-                    ><span class="ps-product__review">(3 Reviews)</span>
+                      <option value="5" selected="selected">5</option>
+                    </select><span class="ps-product__review">(3 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -785,42 +547,23 @@
               </div>
               <div class="ps-product__footer">
                 <div class="ps-product__meta">
-                  <span class="ps-product__price sale">$90.65</span
-                  ><span class="ps-product__del">$60.65</span>
+                  <span class="ps-product__price sale">$90.65</span><span class="ps-product__del">$60.65</span>
                 </div>
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -829,25 +572,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg9-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg9-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg9-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg9-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge">
@@ -865,8 +596,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5" selected="selected">5</option></select
-                    ><span class="ps-product__review">(6 Reviews)</span>
+                      <option value="5" selected="selected">5</option>
+                    </select><span class="ps-product__review">(6 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -879,42 +610,23 @@
               </div>
               <div class="ps-product__footer">
                 <div class="ps-product__meta">
-                  <span class="ps-product__price sale">$77.65</span
-                  ><span class="ps-product__del">$80.65</span>
+                  <span class="ps-product__price sale">$77.65</span><span class="ps-product__del">$80.65</span>
                 </div>
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -923,22 +635,12 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg11-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg11-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -954,8 +656,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4">4</option>
-                      <option value="5" selected="selected">5</option></select
-                    ><span class="ps-product__review">(5 Reviews)</span>
+                      <option value="5" selected="selected">5</option>
+                    </select><span class="ps-product__review">(5 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -973,36 +675,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -1011,25 +695,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg12-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg12-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg12-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg12-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -1045,8 +717,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4" selected="selected">4</option>
-                      <option value="5">5</option></select
-                    ><span class="ps-product__review">(3 Reviews)</span>
+                      <option value="5">5</option>
+                    </select><span class="ps-product__review">(3 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -1064,36 +736,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -1102,25 +756,13 @@
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
                     <figure>
-                      <img
-                        src="/../../assets/images/bg13-removebg-preview.png"
-                        alt="alt"
-                      /><img
-                        src="/../../assets/images/bg13-removebg-preview.png"
-                        alt="alt"
-                      />
+                      <img src="/../../assets/images/bg13-removebg-preview.png" alt="alt" /><img
+                        src="/../../assets/images/bg13-removebg-preview.png" alt="alt" />
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i class="fa fa-search"></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -1134,8 +776,8 @@
                       <option value="2">2</option>
                       <option value="3">3</option>
                       <option value="4" selected="selected">4</option>
-                      <option value="5">5</option></select
-                    ><span class="ps-product__review">(8 Reviews)</span>
+                      <option value="5">5</option>
+                    </select><span class="ps-product__review">(8 Reviews)</span>
                   </div>
                   <div class="ps-product__desc">
                     <ul class="ps-product__list">
@@ -1153,36 +795,18 @@
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                    >
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      name="quantity"
-                      value="1"
-                      type="number"
-                    />
-                    <button
-                      class="plus"
-                      onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                    >
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
-                  <a class="ps-product__link">Add to wishlist</a
-                  ><a class="ps-product__link">Add to Compare</a>
+                  <a class="ps-product__link">Add to wishlist</a><a class="ps-product__link">Add to Compare</a>
                 </div>
               </div>
             </div>
@@ -1200,20 +824,14 @@
               </li>
             </ul>
           </div>
-          <div
-            class="ps-delivery"
-            data-background="img/promotion/banner-delivery-2.jpg"
-            style="
+          <div class="ps-delivery" data-background="img/promotion/banner-delivery-2.jpg" style="
               background-image: url('/../../assets/images/banner-delivery-2.jpg');
-            "
-          >
+            ">
             <div class="ps-delivery__content">
               <div class="ps-delivery__text">
-                <i class="icon-shield-check"></i
-                ><span>
+                <i class="icon-shield-check"></i><span>
                   <strong>100% Secure delivery </strong>without contacting the
-                  courier</span
-                >
+                  courier</span>
               </div>
               <a class="ps-delivery__more">More</a>
             </div>
@@ -1228,10 +846,16 @@
               <div class="ps-widget__content ps-widget__category">
                 <ul class="menu--mobile">
                   <li>
-                    <a>Diagnosis</a
-                    ><span class="sub-toggle"
-                      ><i class="fa fa-chevron-down"></i
-                    ></span>
+                    <a>Sleeping Pills</a>
+                    <!-- <span class="sub-toggle "
+                      >
+                      <i class="fa fa-filter"></i  >
+                  </span> -->
+                    <span class="fil">
+                      <i class="fa fa-filter"></i>
+
+                    </span>
+
                     <ul class="sub-menu">
                       <li><a>Biopsy tools</a></li>
                       <li><a>Endoscopes</a></li>
@@ -1243,10 +867,14 @@
                     </ul>
                   </li>
                   <li>
-                    <a>Equipment</a
-                    ><span class="sub-toggle"
+                    <a>Antibiotic</a>
+                    <!-- <span class="sub-toggle"
                       ><i class="fa fa-chevron-down"></i
-                    ></span>
+                    ></span> -->
+                    <span class="fil">
+                      <i class="fa fa-filter"></i>
+
+                    </span>
                     <ul class="sub-menu">
                       <li><a>Blades</a></li>
                       <li><a>Education</a></li>
@@ -1257,11 +885,13 @@
                       <li><a>Machines</a></li>
                     </ul>
                   </li>
-                  <li>
-                    <a>Higiene</a
-                    ><span class="sub-toggle"
-                      ><i class="fa fa-chevron-down"></i
-                    ></span>
+                  <!-- <li>
+                    <a>Higiene</a>
+                    <span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                    <span class="fil">
+                      <i class="fa fa-filter"></i>
+
+                    </span>
                     <ul class="sub-menu">
                       <li><a>Disposable products</a></li>
                       <li><a>Face masks</a></li>
@@ -1271,12 +901,14 @@
                       <li><a>Surgical foils</a></li>
                       <li><a>Uniforms</a></li>
                     </ul>
-                  </li>
-                  <li>
-                    <a>Laboratory</a
-                    ><span class="sub-toggle"
-                      ><i class="fa fa-chevron-down"></i
-                    ></span>
+                  </li> -->
+                  <!-- <li>
+                    <a>Laboratory</a>
+                    <span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                    <span class="fil">
+                      <i class="fa fa-filter"></i>
+
+                    </span>
                     <ul class="sub-menu">
                       <li><a>Devices</a></li>
                       <li><a>Diagnostic tests</a></li>
@@ -1286,12 +918,14 @@
                       <li><a>Test-tubes</a></li>
                       <li><a>Tubes</a></li>
                     </ul>
-                  </li>
-                  <li>
-                    <a>Tools</a
-                    ><span class="sub-toggle"
-                      ><i class="fa fa-chevron-down"></i
-                    ></span>
+                  </li> -->
+                  <!-- <li>
+                    <a>Tools</a>
+                    <span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+                    <span class="fil">
+                      <i class="fa fa-filter"></i>
+
+                    </span>
                     <ul class="sub-menu">
                       <li><a>Accessories Tools</a></li>
                       <li><a>Blood pressure</a></li>
@@ -1301,12 +935,10 @@
                       <li><a>Pressure</a></li>
                       <li><a>Sugar level</a></li>
                     </ul>
-                  </li>
-                  <li>
-                    <a>Wound Care</a
-                    ><span class="sub-toggle"
-                      ><i class="fa fa-chevron-down"></i
-                    ></span>
+                  </li> -->
+                  <!-- <li>
+                    <a>Wound Care</a>
+                    <span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
                     <ul class="sub-menu">
                       <li><a>Bandages</a></li>
                       <li><a>Gypsum foundations</a></li>
@@ -1316,7 +948,7 @@
                       <li><a>Uniforms</a></li>
                       <li><a>Wound healing</a></li>
                     </ul>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
             </div>
@@ -1335,7 +967,7 @@
                 <button class="ps-widget__filter">Filter</button>
               </div>
             </div> -->
-                               <!-- <div class="ps-widget__block">
+            <!-- <div class="ps-widget__block">
                             <h4 class="ps-widget__title">By price</h4><a class="ps-block-control"><i
                                     class="fa fa-angle-down"></i></a>
                             <div class="ps-widget__content">
@@ -1348,7 +980,7 @@
                                 <button class="ps-widget__filter">Filter</button>
                             </div>
                         </div> -->
-                        <!-- <div class="ps-widget__block">
+            <!-- <div class="ps-widget__block">
                             <h4 class="ps-widget__title">Color</h4><a class="ps-block-control" ><i
                                     class="fa fa-angle-down"></i></a>
                             <div class="ps-widget__content">
@@ -1391,7 +1023,7 @@
                                 </div>
                             </div>
                         </div> -->
-                        <!-- <div class="ps-widget__block">
+            <!-- <div class="ps-widget__block">
                             <h4 class="ps-widget__title">Brands</h4><a class="ps-block-control"><i
                                     class="fa fa-angle-down"></i></a>
                             <div class="ps-widget__content">
@@ -1457,7 +1089,7 @@
                                 </div>
                             </div>
                         </div> -->
-                        <!-- <div class="ps-widget__block">
+            <!-- <div class="ps-widget__block">
                             <h4 class="ps-widget__title">Ratings</h4><a class="ps-block-control"><i
                                     class="fa fa-angle-down"></i></a>
                             <div class="ps-widget__content">
@@ -1493,34 +1125,34 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="ps-widget__promo"><img src="/../../assets/images/banner-sidebar.jpg" alt></div>
-                    </div>
-                </div>
-            </div>
+            <div class="ps-widget__promo"><img src="/../../assets/images/banner-sidebar.jpg" alt></div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 
 
 <div class="row">
-    <!-- <button (click)="openModal()">open my modal</button> -->
-    <modal #myModal>
-        <modal-header>
-            <!-- <h1>Modal header</h1> -->
-        </modal-header>
-        <modal-content>
-            <div class="ps-product--detail">
-                <div class="row">
-                    <div class="col-12 col-xl-6">
-                        <div class="ps-product--gallery">
-                            <div class="ps-product__thumbnail pt-5" >
-                                <!-- <div class="slide"><img src="/../../assets/images/002.jpg" alt="alt" /></div>
+  <!-- <button (click)="openModal()">open my modal</button> -->
+  <modal #myModal>
+    <modal-header>
+      <!-- <h1>Modal header</h1> -->
+    </modal-header>
+    <modal-content>
+      <div class="ps-product--detail">
+        <div class="row">
+          <div class="col-12 col-xl-6">
+            <div class="ps-product--gallery">
+              <div class="ps-product__thumbnail pt-5">
+                <!-- <div class="slide"><img src="/../../assets/images/002.jpg" alt="alt" /></div>
                                 <div class="slide"><img src="/../../assets/images/002.jpg" alt="alt" /></div>
                                 <div class="slide"><img src="/../../assets/images/006.jpg" alt="alt" /></div> -->
-                                <div class="slide"><img src="/../../assets/images/bg1-removebg-preview.png" alt="alt" /></div>
-                                <!-- <div class="slide"><img src="/../../assets/images/016.jpg" alt="alt" /></div> -->
-                            </div>
-                            <!-- <div class="ps-gallery--image">
+                <div class="slide"><img src="/../../assets/images/bg1-removebg-preview.png" alt="alt" /></div>
+                <!-- <div class="slide"><img src="/../../assets/images/016.jpg" alt="alt" /></div> -->
+              </div>
+              <!-- <div class="ps-gallery--image">
                                 <div class="slide">
                                     <div class="ps-gallery__item"><img src="/../../assets/images/001.jpg" alt="alt" /></div>
                                 </div>
@@ -1537,16 +1169,16 @@
                                     <div class="ps-gallery__item"><img src="/../../assets/images/034.jpg" alt="alt" /></div>
                                 </div>
                             </div> -->
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-6">
-                        <div class="ps-product__info">
-                            <div class="ps-product__badge"><span class="ps-badge ps-badge--instock"> IN STOCK</span>
-                            </div>
-                            <div class="ps-product__branch"><a>CLONAZEPAM
-                                    £ 32</a></div>
-                            <div class="ps-product__title"><a>CLONAZEPAM</a></div>
-                            <!-- <div class="ps-product__rating">
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="ps-product__info">
+              <div class="ps-product__badge"><span class="ps-badge ps-badge--instock"> IN STOCK</span>
+              </div>
+              <div class="ps-product__branch"><a>CLONAZEPAM
+                  £ 32</a></div>
+              <div class="ps-product__title"><a>CLONAZEPAM</a></div>
+              <!-- <div class="ps-product__rating">
                                 <select class="ps-rating" data-read-only="true">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -1555,98 +1187,96 @@
                                     <option value="5">5</option>
                                 </select><span class="ps-product__review">(5 Reviews)</span>
                             </div> -->
-                            <div class="ps-product__desc">
-                                <!-- <ul class="ps-product__list">
+              <div class="ps-product__desc">
+                <!-- <ul class="ps-product__list">
                                     <li>Study history up to 30 days</li>
                                     <li>Up to 5 users simultaneously</li>
                                     <li>Has HEALTH certificate</li>
                                 </ul> -->
-                                <table>
-                                    <tr>
-                                        <!-- <th></th> -->
-                                        <th>Power</th>
-                                        <th>Qty</th>
-                                        <th>Price Per Pill </th>
-                                        <th>Our Price
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <!-- <td><input type="radio"> </td> -->
+                <table>
+                  <tr>
+                    <!-- <th></th> -->
+                    <th>Power</th>
+                    <th>Qty</th>
+                    <th>Price Per Pill </th>
+                    <th>Our Price
+                    </th>
+                  </tr>
+                  <tr>
+                    <!-- <td><input type="radio"> </td> -->
 
-                                        <td>2MG </td>
-                                        <td> 30 (pills) </td>
-                                        <td>£ 1.07 </td>
-                                        <td>£ 32</td>
+                    <td>2MG </td>
+                    <td> 30 (pills) </td>
+                    <td>£ 1.07 </td>
+                    <td>£ 32</td>
 
-                                    </tr>
-                                    <tr>
-                                        <!-- <td><input type="radio"> </td> -->
+                  </tr>
+                  <tr>
+                    <!-- <td><input type="radio"> </td> -->
 
-                                        <td>2MG </td>
-                                        <td> 30 (pills) </td>
-                                        <td>£ 1.07 </td>
-                                        <td>£ 32</td>
-                                    </tr>
-                                    <tr>
-                                        <!-- <td><input type="radio"> </td> -->
+                    <td>2MG </td>
+                    <td> 30 (pills) </td>
+                    <td>£ 1.07 </td>
+                    <td>£ 32</td>
+                  </tr>
+                  <tr>
+                    <!-- <td><input type="radio"> </td> -->
 
-                                        <td>2MG </td>
-                                        <td> 30 (pills) </td>
-                                        <td>£ 1.07 </td>
-                                        <td>£ 32</td>
-                                    </tr>
+                    <td>2MG </td>
+                    <td> 30 (pills) </td>
+                    <td>£ 1.07 </td>
+                    <td>£ 32</td>
+                  </tr>
 
-                                </table>
-                            </div>
+                </table>
+              </div>
 
-                            <div class="ps-product__meta"><span class="ps-product__price">$77.65</span>
-                            </div>
-                            <div class="ps-product__quantity">
-                                <h6>Quantity</h6>
-                                <div class="d-md-flex align-items-center">
-                                    <div class="def-number-input number-input safari_only">
-                                        <button class="minus"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
-                                                class="icon-minus"></i></button>
-                                        <input class="quantity" min="0" name="quantity" value="1" type="number" />
-                                        <button class="plus"
-                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
-                                                class="icon-plus"></i></button>
-                                    </div><a class="ps-btn ps-btn--warning" data-toggle="modal"
-                                        data-target="#popupAddcartV2">Add to cart</a>
-                                </div>
-                            </div>
-                            <div class="ps-product__type">
-                                <ul class="ps-product__list">
-                                    <li> <span class="ps-list__title">Tags: </span><a
-                                            class="ps-list__text">Capsule</a><a class="ps-list__text">Pills</a>
-                                    </li>
-                                    <!-- <li> <span class="ps-list__title">SKU: </span><a class="ps-list__text">SF-006</a>
-                                    </li> -->
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+              <div class="ps-product__meta"><span class="ps-product__price">$77.65</span>
+              </div>
+              <div class="ps-product__quantity">
+                <h6>Quantity</h6>
+                <div class="d-md-flex align-items-center">
+                  <div class="def-number-input number-input safari_only">
+                    <button class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i
+                        class="icon-minus"></i></button>
+                    <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                    <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i
+                        class="icon-plus"></i></button>
+                  </div><a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcartV2">Add to
+                    cart</a>
                 </div>
+              </div>
+              <div class="ps-product__type">
+                <ul class="ps-product__list">
+                  <li> <span class="ps-list__title">Tags: </span><a class="ps-list__text">Capsule</a><a
+                      class="ps-list__text">Pills</a>
+                  </li>
+                  <!-- <li> <span class="ps-list__title">SKU: </span><a class="ps-list__text">SF-006</a>
+                                    </li> -->
+                </ul>
+              </div>
             </div>
-        </modal-content>
-        <!-- <modal-footer>
+          </div>
+        </div>
+      </div>
+    </modal-content>
+    <!-- <modal-footer>
             <button class="btn btn-primary" (click)="closeModal()">close</button>
         </modal-footer> -->
-    </modal>
+  </modal>
 
 </div>
 
 <div class="fab" (click)="Goto5()"> <i class="fa fa-shopping-cart" aria-hidden="true">
-  <span class="badge">
-    {{
-    this._CartService.NewCart == undefined ||
-    this._CartService.NewCart == null
-    ? 0
-    : this._CartService.NewCart.items.length
-    }}
-  </span>
-</i>
+    <span class="badge">
+      {{
+      this._CartService.NewCart == undefined ||
+      this._CartService.NewCart == null
+      ? 0
+      : this._CartService.NewCart.items.length
+      }}
+    </span>
+  </i>
 </div>
 <!-- <div class="modal fade" id="popupQuickview" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered ps-quickview">
