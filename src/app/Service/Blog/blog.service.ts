@@ -10,7 +10,7 @@ import { catchError, delay } from 'rxjs/operators';
 export class BlogService {
     AllBlogsData: any = [];
 
-    constructor(public _http: HttpClient) { }
+    constructor(public _http: HttpClient) {}
 
     getAllBlogs() {
         this._http.get<any>(environment.apiPath + 'blogs').subscribe(

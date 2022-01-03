@@ -55,35 +55,46 @@
                   /></a>
                 </div>
                 <div class="ps-footer__title">Our store</div>
-                <p>1487 Rocky Horse Carrefour<br />Arlington, TX 16819</p>
+                <!-- <p>1487 Rocky Horse Carrefour<br />Arlington, TX 16819</p> -->
+                <p>{{ _WebsiteInfoService.WebsiteInfo.address }}</p>
                 <p><a target="_blank">Show on map</a></p>
                 <ul class="ps-social">
                   <li>
-                    <a class="ps-social__link facebook"
+                    <a
+                      class="ps-social__link facebook"
+                      [href]="_WebsiteInfoService.WebsiteInfo.facebook"
                       ><i class="fa fa-facebook"> </i
                       ><span class="ps-tooltip">Facebook</span></a
                     >
                   </li>
                   <li>
-                    <a class="ps-social__link instagram"
+                    <a
+                      class="ps-social__link instagram"
+                      [href]="_WebsiteInfoService.WebsiteInfo.instagram"
                       ><i class="fa fa-instagram"></i
                       ><span class="ps-tooltip">Instagram</span></a
                     >
                   </li>
                   <li>
-                    <a class="ps-social__link youtube"
+                    <a
+                      class="ps-social__link youtube"
+                      [href]="_WebsiteInfoService.WebsiteInfo.youtube"
                       ><i class="fa fa-youtube-play"></i
                       ><span class="ps-tooltip">Youtube</span></a
                     >
                   </li>
                   <li>
-                    <a class="ps-social__link pinterest"
+                    <a
+                      class="ps-social__link pinterest"
+                      [href]="_WebsiteInfoService.WebsiteInfo.pinterest"
                       ><i class="fa fa-pinterest-p"></i
                       ><span class="ps-tooltip">Pinterest</span></a
                     >
                   </li>
                   <li>
-                    <a class="ps-social__link linkedin"
+                    <a
+                      class="ps-social__link linkedin"
+                      [href]="_WebsiteInfoService.WebsiteInfo.linkedin"
                       ><i class="fa fa-linkedin"></i
                       ><span class="ps-tooltip">Linkedin</span></a
                     >
@@ -95,10 +106,11 @@
               <div class="ps-footer--contact">
                 <h5 class="ps-footer__title">Need help</h5>
                 <div class="ps-footer__fax">
-                  <i class="icon-telephone"></i>0020 - 500 - 000
+                  <i class="icon-telephone"></i
+                  >{{ _WebsiteInfoService.WebsiteInfo.phoneNumber }}
                 </div>
                 <p class="ps-footer__work">
-                  Monday – Friday: 9:00-20:00<br />Saturday: 11:00 – 15:00
+                  {{ _WebsiteInfoService.WebsiteInfo.timingSet }}
                 </p>
                 <hr />
                 <p>
@@ -107,7 +119,7 @@
                     ><span
                       class="__cf_email__"
                       data-cfemail="14777b7a6075776054716c75796478713a777b79"
-                      >[email&#160;protected]</span
+                      >{{ _WebsiteInfoService.WebsiteInfo.email }}</span
                     >
                   </a>
                 </p>
