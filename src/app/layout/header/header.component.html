@@ -1,9 +1,9 @@
 <header class="ps-header ps-header--1">
   <div class="ps-noti">
     <div class="container">
-          <p class="m-0">Due to the <strong>COVID 19 </strong>epidemic, orders may be processed with a slight
-              delay</p>
-      </div>
+      <p class="m-0">Due to the <strong>COVID 19 </strong>epidemic, orders may be processed with a slight
+        delay</p>
+    </div>
     <a class="ps-noti__close"><i class="icon-cross"></i></a>
   </div>
   <div class="ps-header__top">
@@ -17,8 +17,8 @@
     <div class="container">
       <div class="ps-logo">
         <a>
-          <div class="ps-logo"><a> <img src="/../../assets/images/pharm-icon.jpg" height="100" alt><img
-                class="sticky-logo" src="/../../assets/pharm-icon.jpg" width="10" height="10" alt></a></div>
+          <div style="cursor: pointer;" class="ps-logo" (click)="Goto6()"><a> <img src="/../../assets/images/pharm-icon.jpg" height="100"
+                alt><img class="sticky-logo" src="/../../assets/pharm-icon.jpg" width="10" height="10" alt></a></div>
         </a>
       </div>
       <a class="ps-menu--sticky"><i class="fa fa-bars"></i></a>
@@ -133,17 +133,8 @@
           </li>
         </ul>
         <div class="ps-language-currency">
-          <a
-            class="ps-dropdown-value"
-            data-toggle="modal"
-            data-target="#popupLanguage"
-            >English</a
-          ><a
-            class="ps-dropdown-value"
-            data-toggle="modal"
-            data-target="#popupCurrency"
-            >USD</a
-          >
+          <a class="ps-dropdown-value" data-toggle="modal" data-target="#popupLanguage">English</a><a
+            class="ps-dropdown-value" data-toggle="modal" data-target="#popupCurrency">USD</a>
         </div>
         <div class="ps-header__search">
           <form action="do_action" method="post">

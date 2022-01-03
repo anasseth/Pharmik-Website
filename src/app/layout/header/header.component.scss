@@ -183,3 +183,27 @@ border: 2px solid #198ae3;
 .icondiv{
   float: right;margin-right: 20px;transform: translatey(-35px);
 }
+
+.ps-noti {
+  background-color: #198ae3 ;
+  position: relative;
+}
+
+.ps-noti p {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 8px 35px 8px 0;
+  text-align: center;
+}
+
+.ps-noti__close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  color: #ffffff !important;
+  display: block;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}

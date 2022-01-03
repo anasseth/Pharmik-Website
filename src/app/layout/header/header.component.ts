@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
 
   Goto() {
     this.router.navigate(['/Aboutus']);
-    console.log("afnan")
+    
   }
 
   Goto1() {
@@ -41,6 +41,9 @@ export class HeaderComponent implements OnInit {
 
   Goto5() {
     this.router.navigate(['/Shoppingcart']);
+  }
+  Goto6() {
+    this.router.navigate(['']);
   }
 
 }

@@ -3,6 +3,7 @@ import { FaqsService } from './Service/FAQ/faq.service';
 import { ProductsService } from './Service/Product/product.service';
 import { CategoriesService } from './Service/Categories/categories.service';
 import { WebsiteInfoService } from './Service/WebsiteInfo/webinfo.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit {
     public _ProductService: ProductsService,
     public _FAQService: FaqsService,
     public _CategoriesService: CategoriesService,
-    public _WebsiteInfo: WebsiteInfoService
+    public _WebsiteInfo: WebsiteInfoService,
+    private spinner: NgxSpinnerService,
   ) { }
 
   ngOnInit(): void {
@@ -24,5 +26,13 @@ export class AppComponent implements OnInit {
     this._FAQService.getAllFAQs();
     this._CategoriesService.getAllCategories();
     this._WebsiteInfo.getWebsiteInfo();
+
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 5000);
   }
-}
+  }
+

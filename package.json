@@ -31,6 +31,7 @@
     "ngb-modal": "^1.0.5",
     "ngx-owl-carousel-o": "^6.0.0",
     "ngx-slick-carousel": "^0.5.1",
+    "ngx-spinner": "^13.0.0",
     "rxjs": "~6.6.0",
     "select2": "^4.1.0-rc.0",
     "tslib": "^2.1.0",
