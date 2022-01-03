@@ -17,30 +17,18 @@
     <div class="container">
       <div class="ps-logo">
         <a>
-          <img
-            src="/../../assets/images/new-med-icon.png"
-            width="70"
-            height="60"
-            alt /><img
-            class="sticky-logo"
-            src="/../../assets/new-med-icon.png"
-            width="70"
-            height="60"
-            alt
-        /></a>
+          <div class="ps-logo"><a> <img src="/../../assets/images/pharm-icon.jpg" height="100" alt><img
+                class="sticky-logo" src="/../../assets/pharm-icon.jpg" width="10" height="10" alt></a></div>
+        </a>
       </div>
       <a class="ps-menu--sticky"><i class="fa fa-bars"></i></a>
       <div class="ps-header__right">
         <ul class="ps-header__icons">
           <li>
-            <a class="ps-header__item open-search"
-              ><i class="icon-magnifier"></i
-            ></a>
+            <a class="ps-header__item open-search"><i class="icon-magnifier"></i></a>
           </li>
           <li>
-            <a class="ps-header__item" id="login-modal"
-              ><i class="icon-user"></i
-            ></a>
+            <a class="ps-header__item" id="login-modal"><i class="icon-user"></i></a>
             <div class="ps-login--modal">
               <form method="get" action="do_action">
                 <div class="form-group">
@@ -91,38 +79,30 @@
                       </li>
                   </ul> -->
 
-          <li>
+          <!-- <li>
             <a class="ps-header__item"
               ><i class="fa fa-heart-o"></i><span class="badge">3</span></a
             >
-          </li>
+          </li> -->
           <li>
             <a class="ps-header__item" id="cart-mini">
               <i class="icon-cart-empty" (click)="Goto5()"></i>
               <span class="badge">
                 {{
-                  this._CartService.NewCart == undefined ||
-                  this._CartService.NewCart == null
-                    ? 0
-                    : this._CartService.NewCart.items.length
+                this._CartService.NewCart == undefined ||
+                this._CartService.NewCart == null
+                ? 0
+                : this._CartService.NewCart.items.length
                 }}
-              </span></a
-            >
+              </span></a>
             <div class="ps-cart--mini">
               <ul class="ps-cart__items">
                 <li class="ps-cart__item">
                   <div class="ps-product--mini-cart">
-                    <a class="ps-product__thumbnail"
-                      ><img
-                        src="/../../assets/images/new-med-icon.png"
-                        width="70"
-                        height="60"
-                        alt
-                    /></a>
+                    <a class="ps-product__thumbnail"><img src="/../../assets/images/new-med-icon.png" width="70"
+                        height="60" alt /></a>
                     <div class="ps-product__content">
-                      <a class="ps-product__name"
-                        >Somersung Sonic X2500 Pro White</a
-                      >
+                      <a class="ps-product__name">Somersung Sonic X2500 Pro White</a>
                       <p class="ps-product__meta">
                         <span class="ps-product__price">$399.99</span>
                       </p>
@@ -132,16 +112,11 @@
                 </li>
                 <li class="ps-cart__item">
                   <div class="ps-product--mini-cart">
-                    <a class="ps-product__thumbnail"
-                      ><img src="img/products/001.jpg" alt="alt"
-                    /></a>
+                    <a class="ps-product__thumbnail"><img src="img/products/001.jpg" alt="alt" /></a>
                     <div class="ps-product__content">
-                      <a class="ps-product__name"
-                        >Digital Thermometer X30-Pro</a
-                      >
+                      <a class="ps-product__name">Digital Thermometer X30-Pro</a>
                       <p class="ps-product__meta">
-                        <span class="ps-product__sale">$77.65</span
-                        ><span class="ps-product__is-price">$80.65</span>
+                        <span class="ps-product__sale">$77.65</span><span class="ps-product__is-price">$80.65</span>
                       </p>
                     </div>
                     <a class="ps-product__remove"><i class="icon-cross"></i></a>
@@ -152,13 +127,12 @@
                 <span>Subtotal </span><span>$399</span>
               </div>
               <div class="ps-cart__footer">
-                <a class="ps-btn ps-btn--outline">View Cart</a
-                ><a class="ps-btn ps-btn--warning">Checkout</a>
+                <a class="ps-btn ps-btn--outline">View Cart</a><a class="ps-btn ps-btn--warning">Checkout</a>
               </div>
             </div>
           </li>
         </ul>
-        <div class="ps-language-currency">
+        <!-- <div class="ps-language-currency">
           <a
             class="ps-dropdown-value"
             data-toggle="modal"
@@ -170,16 +144,12 @@
             data-target="#popupCurrency"
             >USD</a
           >
-        </div>
+        </div> -->
         <div class="ps-header__search">
           <form action="do_action" method="post">
             <div class="ps-search-table">
               <div class="input-group">
-                <input
-                  class="form-control ps-input"
-                  type="text"
-                  placeholder="Search for products"
-                />
+                <input class="form-control ps-input" type="text" placeholder="Search for products" />
                 <!-- <div class="input-group-append icondiv"  ><a ><i class="fa fa-search"></i></a></div> -->
               </div>
             </div>
@@ -198,10 +168,8 @@
                     </div>
                     <div class="ps-product__content">
                       <h5 class="ps-product__title">
-                        <a
-                          >3-layer <span class="hightlight">mask</span> with an
-                          elastic band (1 piece)</a
-                        >
+                        <a>3-layer <span class="hightlight">mask</span> with an
+                          elastic band (1 piece)</a>
                       </h5>
                       <p class="ps-product__desc">
                         Study history up to 30 days Up to 5 users simultaneously
@@ -224,18 +192,15 @@
                     </div>
                     <div class="ps-product__content">
                       <h5 class="ps-product__title">
-                        <a
-                          >3 Layer Disposable Protective Face
-                          <span class="hightlight">mask</span>s</a
-                        >
+                        <a>3 Layer Disposable Protective Face
+                          <span class="hightlight">mask</span>s</a>
                       </h5>
                       <p class="ps-product__desc">
                         Study history up to 30 days Up to 5 users simultaneously
                         Has HEALTH certificate
                       </p>
                       <div class="ps-product__meta">
-                        <span class="ps-product__price sale">$14.52</span
-                        ><span class="ps-product__del">$17.24</span>
+                        <span class="ps-product__price sale">$14.52</span><span class="ps-product__del">$17.24</span>
                       </div>
                     </div>
                   </div>
@@ -251,18 +216,15 @@
                     </div>
                     <div class="ps-product__content">
                       <h5 class="ps-product__title">
-                        <a
-                          >3-Ply Ear-Loop Disposable Blue Face
-                          <span class="hightlight">mask</span></a
-                        >
+                        <a>3-Ply Ear-Loop Disposable Blue Face
+                          <span class="hightlight">mask</span></a>
                       </h5>
                       <p class="ps-product__desc">
                         Study history up to 30 days Up to 5 users simultaneously
                         Has HEALTH certificate
                       </p>
                       <div class="ps-product__meta">
-                        <span class="ps-product__price sale">$14.99</span
-                        ><span class="ps-product__del">$38.24</span>
+                        <span class="ps-product__price sale">$14.99</span><span class="ps-product__del">$38.24</span>
                       </div>
                     </div>
                   </div>
@@ -278,18 +240,15 @@
                     </div>
                     <div class="ps-product__content">
                       <h5 class="ps-product__title">
-                        <a
-                          >Disposable Face
-                          <span class="hightlight">mask</span> for Unisex</a
-                        >
+                        <a>Disposable Face
+                          <span class="hightlight">mask</span> for Unisex</a>
                       </h5>
                       <p class="ps-product__desc">
                         Study history up to 30 days Up to 5 users simultaneously
                         Has HEALTH certificate
                       </p>
                       <div class="ps-product__meta">
-                        <span class="ps-product__price sale">$8.15</span
-                        ><span class="ps-product__del">$12.24</span>
+                        <span class="ps-product__price sale">$8.15</span><span class="ps-product__del">$12.24</span>
                       </div>
                     </div>
                   </div>
@@ -309,22 +268,15 @@
           <ul class="menu">
             <li class="has-mega-menu">
               <a>
-                <i class="fa fa-bars"></i>Products<span class="sub-toggle"
-                  ><i class="fa fa-chevron-down"></i></span
-              ></a>
+                <i class="fa fa-bars"></i>Products<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span></a>
               <div class="mega-menu">
                 <div class="container">
                   <div class="mega-menu__row">
                     <div class="mega-menu__column">
-                      <h4>Wound Care</h4>
+                      <h4>Category</h4>
                       <ul class="sub-menu--mega">
-                        <li><a>Bandages</a></li>
-                        <li><a>Gypsum foundations</a></li>
-                        <li><a>Patches and tapes</a></li>
-                        <li><a>Stomatology</a></li>
-                        <li><a>Surgical sutures</a></li>
-                        <li><a>Uniforms</a></li>
-                        <li><a>Wound healing</a></li>
+                        <li><a>Sleeping Pills</a></li>
+                        <li><a>antiboitic</a></li>
                       </ul>
                     </div>
                   </div>
@@ -355,20 +307,11 @@
     <div class="size col-lg-6">
       <div class="ps-logo">
         <a>
-          <img
-            src="/../../assets/images/new-med-icon.png"
-            width="70"
-            height="60"
-            alt
-        /></a>
+          <img src="/../../assets/images/new-med-icon.png" width="70" height="60" alt /></a>
       </div>
     </div>
     <div class="col-lg-6">
-      <input
-        class="form-control ps1-input"
-        type="text"
-        placeholder="Search for products"
-      />
+      <input class="form-control ps1-input" type="text" placeholder="Search for products" />
       <div class="input-group-append icondiv">
         <a><i class="fa fa-search"></i></a>
       </div>

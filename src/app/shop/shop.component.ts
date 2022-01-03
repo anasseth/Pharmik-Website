@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ModalManager } from 'ngb-modal';
 import { ProductsService } from '../Service/Product/product.service';
 import { CartService } from '../Service/Cart/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
@@ -19,7 +20,8 @@ export class ShopComponent implements OnInit {
   constructor(
     private modalService: ModalManager,
     public _ProductService: ProductsService,
-    public _CartService: CartService
+    public _CartService: CartService,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -115,6 +117,8 @@ export class ShopComponent implements OnInit {
       product.quantity = Number(product.quantity) + 1;
     }
   }
-
+  Goto5() {
+    this.router.navigate(['/Shoppingcart']);
+  }
 
 }
