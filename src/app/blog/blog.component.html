@@ -13,28 +13,19 @@
           <div class="ps-blog--sidebar">
             <div class="ps-blog--latset">
               <div class="ps-promo__item">
-                <img
-                  class="ps-promo__banner"
-                  src="/../../assets/images/blog-fullwidth-992x525.jpg"
-                  alt="alt"
-                />
+                <img class="ps-promo__banner" src="/../../assets/images/blog-fullwidth-992x525.jpg" alt="alt" />
                 <div class="ps-blog__badge">
-                  <span class="ps-badge__item">blog</span
-                  ><span class="ps-badge__item">PHARMACY</span
-                  ><span class="ps-badge__item">SALE</span>
+                  <span class="ps-badge__item">blog</span><span class="ps-badge__item">PHARMACY</span><span
+                    class="ps-badge__item">SALE</span>
                 </div>
               </div>
               <div class="ps-blog__content">
                 <div class="ps-blog__meta">
-                  <span class="ps-blog__date">Jan 11, 2021</span
-                  ><a class="ps-blog__author">Alfredo Austin</a>
+                  <span class="ps-blog__date">Jan 11, 2021</span><a class="ps-blog__author">Alfredo Austin</a>
                 </div>
-                <a
-                  (click)="changeRoute('medication-blog')"
-                  class="ps-blog__title"
-                  >The latest tests of popular masks in accordance with CV2s
-                  standards</a
-                >
+                <a (click)="changeRoute('medication-blog')" class="ps-blog__title">The latest tests of popular masks in
+                  accordance with CV2s
+                  standards</a>
                 <p class="ps-blog__desc">
                   Lorem Ipsum has been the industry's standard dummy text ever
                   since the 1500s, when an unknown printer took a galley of type
@@ -47,17 +38,9 @@
               <div class="col-12 col-md-6" *ngFor="let blog of blogData">
                 <div class="ps-blog--latset">
                   <div class="ps-promo__item">
-                    <img
-                      class="ps-promo__banner"
-                      [src]="blog.bannerImageURL"
-                      alt="alt"
-                    />
+                    <img class="ps-promo__banner" [src]="blog.bannerImageURL" alt="alt" />
                     <div class="ps-blog__badge">
-                      <span
-                        class="ps-badge__item"
-                        *ngFor="let keyword of blog.keyword"
-                        >{{ keyword }}</span
-                      >
+                      <span class="ps-badge__item" *ngFor="let keyword of blog.keyword">{{ keyword }}</span>
                     </div>
                   </div>
                   <div class="ps-blog__content">
@@ -67,11 +50,7 @@
                       </span>
                       <a class="ps-blog__author">{{ blog.writer }}</a>
                     </div>
-                    <a
-                      class="ps-blog__title"
-                      (click)="changeRoute(blog.urlParameter)"
-                      >{{ blog.name }}</a
-                    >
+                    <a class="ps-blog__title" (click)="changeRoute(blog.urlParameter)">{{ blog.name }}</a>
                     <p class="ps-blog__desc">
                       {{ blog.pageDescription }}
                     </p>
@@ -290,18 +269,33 @@
               </div>
             </div> -->
           </div>
-          <div class="ps-pagination">
-            <ul class="pagination">
-              <li>
-                <a><i class="fa fa-angle-double-left"></i></a>
-              </li>
-              <li class="active"><a>1</a></li>
+          <div class="row">
+            <div class="ps-pagination col-lg-3">
+              <ul class="pagination">
+                <li>
+                  <a><i class="fa fa-angle-double-left"></i></a>
+                </li>
+                <!-- <li class="active"><a>1</a></li>
               <li><a>2</a></li>
-              <li><a>3</a></li>
-              <li>
-                <a><i class="fa fa-angle-double-right"></i></a>
-              </li>
-            </ul>
+              <li><a>3</a></li> -->
+                <li>
+                  <a><i class="fa fa-angle-double-right"></i></a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="ps-categogy__sort col-lg-3" style="margin-top: 20px; ">
+              <form>
+                <span>Item per page</span>
+                <select class="form-select">
+                  <option selected>Select item per page</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>1
+                  <option value="20">20</option>
+
+                </select>
+              </form>
+            </div>
           </div>
         </div>
         <div class="col-12 col-md-3">
@@ -344,43 +338,18 @@
                         </figure>
                       </a>
                       <div class="ps-product__actions">
-                        <div
-                          class="ps-product__item"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Wishlist"
-                        >
+                        <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist">
                           <a><i class="fa fa-heart-o"></i></a>
                         </div>
-                        <div
-                          class="ps-product__item rotate"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Add to compare"
-                        >
-                          <a data-toggle="modal" data-target="#popupCompare"
-                            ><i class="fa fa-align-left"></i
-                          ></a>
+                        <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left"
+                          title="Add to compare">
+                          <a data-toggle="modal" data-target="#popupCompare"><i class="fa fa-align-left"></i></a>
                         </div>
-                        <div
-                          class="ps-product__item"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Quick view"
-                        >
-                          <a data-toggle="modal" data-target="#popupQuickview"
-                            ><i class="fa fa-search"></i
-                          ></a>
+                        <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                          <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"></i></a>
                         </div>
-                        <div
-                          class="ps-product__item"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Add to cart"
-                        >
-                          <a data-toggle="modal" data-target="#popupAddcart"
-                            ><i class="fa fa-shopping-basket"></i
-                          ></a>
+                        <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Add to cart">
+                          <a data-toggle="modal" data-target="#popupAddcart"><i class="fa fa-shopping-basket"></i></a>
                         </div>
                       </div>
                       <div class="ps-product__badge"></div>
@@ -390,8 +359,7 @@
                         <a>Somersung Sonic X500 Basic</a>
                       </h5>
                       <div class="ps-product__meta">
-                        <span class="ps-product__price sale">$38.39</span
-                        ><span class="ps-product__del">$53.99</span>
+                        <span class="ps-product__price sale">$38.39</span><span class="ps-product__del">$53.99</span>
                       </div>
                       <div class="ps-product__rating">
                         <select class="ps-rating" data-read-only="true">
@@ -401,8 +369,8 @@
                           <option value="4">4</option>
                           <option value="5" selected="selected">
                             5
-                          </option></select
-                        ><span class="ps-product__review">( Reviews)</span>
+                          </option>
+                        </select><span class="ps-product__review">( Reviews)</span>
                       </div>
                       <div class="ps-product__desc">
                         <ul class="ps-product__list">
@@ -413,60 +381,30 @@
                       </div>
                       <div class="ps-product__actions ps-product__group-mobile">
                         <div class="ps-product__quantity">
-                          <div
-                            class="def-number-input number-input safari_only"
-                          >
-                            <button
-                              class="minus"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
-                            >
+                          <div class="def-number-input number-input safari_only">
+                            <button class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
                               <i class="icon-minus"></i>
                             </button>
-                            <input
-                              class="quantity"
-                              min="0"
-                              name="quantity"
-                              value="1"
-                              type="number"
-                            />
-                            <button
-                              class="plus"
-                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
-                            >
+                            <input class="quantity" min="0" name="quantity" value="1" type="number" />
+                            <button class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
                               <i class="icon-plus"></i>
                             </button>
                           </div>
                         </div>
                         <div class="ps-product__cart">
-                          <a
-                            class="ps-btn ps-btn--warning"
-                            data-toggle="modal"
-                            data-target="#popupAddcart"
-                            >Add to cart</a
-                          >
+                          <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart">Add to
+                            cart</a>
                         </div>
-                        <div
-                          class="ps-product__item cart"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Add to cart"
-                        >
+                        <div class="ps-product__item cart" data-toggle="tooltip" data-placement="left"
+                          title="Add to cart">
                           <a><i class="fa fa-shopping-basket"></i></a>
                         </div>
-                        <div
-                          class="ps-product__item"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Wishlist"
-                        >
+                        <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Wishlist">
                           <a><i class="fa fa-heart-o"></i></a>
                         </div>
-                        <div
-                          class="ps-product__item rotate"
-                          data-toggle="tooltip"
-                          data-placement="left"
-                          title="Add to compare"
-                        >
+                        <div class="ps-product__item rotate" data-toggle="tooltip" data-placement="left"
+                          title="Add to compare">
                           <a><i class="fa fa-align-left"></i></a>
                         </div>
                       </div>
