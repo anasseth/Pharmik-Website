@@ -12,46 +12,49 @@
             <p class="ps-contact__text">
               We are at your disposal 7 days a week!
             </p>
-            <h3 class="ps-contact__fax">0020 – 500 – 000</h3>
+            <h3 class="ps-contact__fax">
+              {{ _WebsiteInfoService.WebsiteInfo.phoneNumber }}
+            </h3>
             <div class="ps-contact__work">
-              Monday – Friday: 9:00-20:00<br />Saturday: 11:00 – 15:00
-            </div>
-            <div class="ps-contact__email">
-              <a
-                ><span
-                  class="__cf_email__"
-                  data-cfemail="a9cac6c7ddc8cadde9ccd1c8c4d9c5cc87cac6c4"
-                  >[email&#160;protected]</span
-                ></a
-              >
+              {{ _WebsiteInfoService.WebsiteInfo.timingSet }}
             </div>
             <ul class="ps-social">
               <li>
-                <a class="ps-social__link facebook"
+                <a
+                  class="ps-social__link facebook"
+                  [href]="_WebsiteInfoService.WebsiteInfo.facebook"
                   ><i class="fa fa-facebook"> </i
                   ><span class="ps-tooltip">Facebook</span></a
                 >
               </li>
               <li>
-                <a class="ps-social__link instagram"
+                <a
+                  class="ps-social__link instagram"
+                  [href]="_WebsiteInfoService.WebsiteInfo.instagram"
                   ><i class="fa fa-instagram"></i
                   ><span class="ps-tooltip">Instagram</span></a
                 >
               </li>
               <li>
-                <a class="ps-social__link youtube"
+                <a
+                  class="ps-social__link youtube"
+                  [href]="_WebsiteInfoService.WebsiteInfo.youtube"
                   ><i class="fa fa-youtube-play"></i
                   ><span class="ps-tooltip">Youtube</span></a
                 >
               </li>
               <li>
-                <a class="ps-social__link pinterest"
+                <a
+                  class="ps-social__link pinterest"
+                  [href]="_WebsiteInfoService.WebsiteInfo.pinterest"
                   ><i class="fa fa-pinterest-p"></i
                   ><span class="ps-tooltip">Pinterest</span></a
                 >
               </li>
               <li>
-                <a class="ps-social__link linkedin"
+                <a
+                  class="ps-social__link linkedin"
+                  [href]="_WebsiteInfoService.WebsiteInfo.linkedin"
                   ><i class="fa fa-linkedin"></i
                   ><span class="ps-tooltip">Linkedin</span></a
                 >
@@ -63,6 +66,7 @@
           <div class="ps-contact__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.822845645748!2d-97.1301607845029!3d32.770434891627616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7dcf27b929d9%3A0xc63407d6f47753b9!2s1487%20Rocky%20Canyon%20Rd%2C%20Arlington%2C%20TX%2076012%2C%20USA!5e0!3m2!1sen!2s!4v1616124426616!5m2!1sen!2s"
+              [src]="_WebsiteInfoService.WebsiteInfo.googleMapLink"
               width="600"
               height="450"
               style="border: 0"

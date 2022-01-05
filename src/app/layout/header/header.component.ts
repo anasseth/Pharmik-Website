@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cart } from 'src/app/Models/Cart/Cart-Model';
 import { CartService } from 'src/app/Service/Cart/cart.service';
+import { WebsiteInfoService } from 'src/app/Service/WebsiteInfo/webinfo.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public _CartService: CartService
+    public _CartService: CartService,
+    public _WebsiteInfoService:WebsiteInfoService
   ) { }
 
   ngOnInit(): void {

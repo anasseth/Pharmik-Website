@@ -10,6 +10,7 @@ import { Product } from 'src/app/Models/Product/Product-Model';
 })
 export class ProductsService {
     allProductData!: Product[];
+    allProductDataCopy!: Product[];
 
     constructor(public _http: HttpClient) { }
     LoadAllProducts() {

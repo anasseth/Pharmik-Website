@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CustomerQueryService } from '../Service/Customer-Info/customer-query.service';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm, Validators, FormGroup } from '@angular/forms';
+import { WebsiteInfoService } from '../Service/WebsiteInfo/webinfo.service';
 
 
 @Component({
@@ -20,7 +21,8 @@ export class ContactusComponent implements OnInit {
 
   constructor(
     public _CustomerQueryService: CustomerQueryService,
-    public fb: FormBuilder
+    public fb: FormBuilder,
+    public _WebsiteInfoService:WebsiteInfoService
   ) { }
 
   ngOnInit(): void {

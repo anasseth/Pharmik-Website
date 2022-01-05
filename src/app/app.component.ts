@@ -4,6 +4,8 @@ import { ProductsService } from './Service/Product/product.service';
 import { CategoriesService } from './Service/Categories/categories.service';
 import { WebsiteInfoService } from './Service/WebsiteInfo/webinfo.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { CartService } from './Service/Cart/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -19,9 +21,14 @@ export class AppComponent implements OnInit {
     public _CategoriesService: CategoriesService,
     public _WebsiteInfo: WebsiteInfoService,
     private spinner: NgxSpinnerService,
+    public _CartService: CartService,
+    public Router: Router
   ) { }
 
   ngOnInit(): void {
+    if (this._CartService.NewCart == null || this._CartService.NewCart == undefined || this._CartService.NewCart.typesOfPill.length == 0) {
+      this.Router.navigate(["/Shop"])
+    }
     this._ProductService.getAllProducts();
     this._FAQService.getAllFAQs();
     this._CategoriesService.getAllCategories();
@@ -34,5 +41,5 @@ export class AppComponent implements OnInit {
       this.spinner.hide();
     }, 5000);
   }
-  }
+}
 

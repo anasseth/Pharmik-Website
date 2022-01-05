@@ -3,6 +3,7 @@ import { ModalManager } from 'ngb-modal';
 import { ProductsService } from '../Service/Product/product.service';
 import { CartService } from '../Service/Cart/cart.service';
 import { Router } from '@angular/router';
+import { CategoriesService } from '../Service/Categories/categories.service';
 
 @Component({
   selector: 'app-shop',
@@ -14,6 +15,8 @@ export class ShopComponent implements OnInit {
   private modalRef: any;
   selectedChild: number = 0;
   changeTypeDetection: any = [];
+  productData: any;
+  currentProductObject: any = {};
 
   @ViewChild('myModal') myModal: any;
 
@@ -22,13 +25,15 @@ export class ShopComponent implements OnInit {
     public _ProductService: ProductsService,
     public _CartService: CartService,
     private router: Router,
+    public _CategoryService: CategoriesService
   ) { }
 
   ngOnInit(): void {
     this._ProductService.getAllProducts();
+    this._CategoryService.loadAllCategories();
   }
 
-  openModal() {
+  openModal(productObject: any) {
     this.modalRef = this.modalService.open(this.myModal, {
       size: "lg",
       modalClass: 'mymodal',
@@ -40,6 +45,8 @@ export class ShopComponent implements OnInit {
       closeOnOutsideClick: true,
       backdropClass: "modal-backdrop"
     })
+
+    this.setCurrentProduct(productObject)
   }
 
   closeModal() {
@@ -117,8 +124,36 @@ export class ShopComponent implements OnInit {
       product.quantity = Number(product.quantity) + 1;
     }
   }
+
+
   Goto5() {
     this.router.navigate(['/Shoppingcart']);
   }
+
+  filterProduct(category: any) {
+    console.log(category)
+    this._ProductService.allProductData = this._ProductService.allProductDataCopy.filter(
+      x => x.name == category.name
+    )
+  }
+
+
+  setCurrentProduct(productObject: any) {
+    this.currentProductObject = productObject;
+    console.log("**************")
+    console.log("")
+    console.log("Product : ", productObject)
+    console.log("")
+    console.log("**************")
+  }
+
+  fixedPrice(price: any) {
+    return Number(price).toFixed(2)
+  }
+
+  discountedPrice(price: any) {
+    return Number(price*1.2).toFixed(2)
+  }
+
 
 }

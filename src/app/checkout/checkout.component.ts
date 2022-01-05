@@ -17,6 +17,7 @@ export class CheckoutComponent implements OnInit {
 
   billingAmount: any = 0;
   checkoutObject: any = {};
+  trackingIDofCustomer: any;
 
   checkoutForm: FormGroup = this.fb.group({
     uniqueOrderNumber: ['', Validators.required],
@@ -49,6 +50,9 @@ export class CheckoutComponent implements OnInit {
     // if (this._CartService.NewCart != null || this._CartService.NewCart != null) {
     //   this.Router.navigate(["/"])
     // }
+    if (this._CartService.NewCart == null || this._CartService.NewCart == undefined || this._CartService.NewCart.typesOfPill.length == 0) {
+      this.Router.navigate(["/Shop"])
+    }
     this.calculateBilling();
     this.checkoutObject = {
       uniqueOrderNumber: null,
@@ -94,6 +98,7 @@ export class CheckoutComponent implements OnInit {
   }
 
   submitBillingInformation() {
+    this.trackingIDofCustomer = this.checkoutObject.trackingID;
     let orderNumber = this.Order_Number_Generator();
     this.checkoutObject.uniqueOrderNumber = orderNumber;
 
@@ -113,25 +118,28 @@ export class CheckoutComponent implements OnInit {
     console.log("Cart Object : ", this._CartService.NewCart)
     console.log("Cart Object : ", JSON.stringify(this._CartService.NewCart, undefined, 3))
 
-    this._CartService.postNewCart().subscribe(
-      (data) => {
-        console.log(data)
-      },
-      (err) => {
-        console.log(err)
-      }, () => {
-        this._CheckoutService.postNewCheckout(this.checkoutObject).subscribe(
-          (data) => {
-            console.log(data)
-          },
-          (err) => {
-            console.log(err)
-          }, () => {
-            console.log("Cart Posted Successfully")
-          }
-        )
-      }
-    )
+    // this._CartService.postNewCart().subscribe(
+    //   (data) => {
+    //     console.log(data)
+    //   },
+    //   (err) => {
+    //     console.log(err)
+    //   }, () => {
+    //     this._CheckoutService.postNewCheckout(this.checkoutObject).subscribe(
+    //       (data) => {
+    //         console.log(data)
+    //         this.openModal()
+    //         this.resetForm()
+    //       },
+    //       (err) => {
+    //         console.log(err)
+    //         this.trackingIDofCustomer = null;
+    //       }, () => {
+    //         console.log("Cart Posted Successfully")
+    //       }
+    //     )
+    //   }
+    // )
 
   }
   openModal() {
@@ -149,5 +157,26 @@ export class CheckoutComponent implements OnInit {
   }
   closeModal() {
     this.modalService.close(this.modalRef);
+  }
+
+  resetForm() {
+    this.checkoutObject = {
+      uniqueOrderNumber: null,
+      trackingID: null,
+      first_name: null,
+      last_name: null,
+      email_address: null,
+      mobile: null,
+      company_name: null,
+      address_line_one: null,
+      address_line_two: null,
+      city: null,
+      postcode: null,
+      country: null,
+      regionOrState: null,
+      orderNotes: null,
+      paymentType: null,
+      creditCardType: null,
+    }
   }
 }
