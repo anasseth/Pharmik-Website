@@ -1,0 +1,21 @@
+.ps-blog--sidebar .ps-blog--latset {
+    margin-bottom: 60px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.ps-blog--sidebar .ps-blog--latset .ps-blog__content {
+    cursor: pointer;
+    padding: 2%;
+}
+
+.ps-promo__item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
