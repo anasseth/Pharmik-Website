@@ -182,6 +182,7 @@ export class CheckoutComponent implements OnInit {
 
   onCheckoutFormCheck() {
     if (this.checkoutForm.valid) {
+      this.submitBillingInformation()
       return true;
     } else {
       this.validateAllFormFields(this.checkoutForm);
