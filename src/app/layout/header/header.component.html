@@ -12,7 +12,7 @@
     <div class="container">
       <div class="ps-header__text">
         Need help?
-        <strong>{{ _WebsiteInfoService.WebsiteInfo.phoneNumber }}</strong>
+        <strong> {{ _WebsiteInfoService.WebsiteInfo.phoneNumber }}</strong>
       </div>
     </div>
   </div>
@@ -34,6 +34,7 @@
             <a class="ps-header__item open-search"><i class="icon-magnifier"></i></a>
           </li>
           <li>
+            <!-- <i class="fa fa-heart"></i> -->
             <a class="ps-header__item" id="login-modal"><i class="icon-user"></i></a>
             <div class="ps-login--modal">
               <form method="get" action="do_action">
@@ -55,6 +56,7 @@
               </form>
             </div>
           </li>
+          <!-- <li><a class="ps-header__item" ><i class="fa fa-heart-o"></i></a></li> -->
 
           <!-- <ul class="menu">
                       <li class="has-mega-menu"><a href="#"> <i class="fa fa-bars"></i>Products<span
@@ -139,24 +141,19 @@
           </li>
         </ul>
         <div class="ps-language-currency">
-          <a class="ps-dropdown-value" data-toggle="modal" data-target="#popupLanguage">English</a><a
-            class="ps-dropdown-value" data-toggle="modal" data-target="#popupCurrency">USD</a>
+          <a class="ps-dropdown-value" data-toggle="modal" data-target="#popupLanguage">Favorate</a>
+          <a class="ps-dropdown-value" data-toggle="modal" data-target="#popupLanguage">English</a>
+          <a class="ps-dropdown-value" data-toggle="modal" data-target="#popupCurrency">USD</a>
         </div>
         <div class="ps-header__search">
           <form action="do_action" method="post">
-            <div >
+            <div>
               <input class="form-control ps1-input" type="text" placeholder="Search for products" />
               <div class="input-group-append icondiv">
                 <a><i class="fa fa-search" style="color: rgb(82, 157, 255);"></i></a>
               </div>
             </div>
-            <!-- <div class="ps-search-table">
-              <div class="input-group">
-                <input class="form-control ps-input" type="text" placeholder="Search for products" />
 
-                <div class="input-group-append icondiv"><a><i class="fa fa-search"></i></a></div>
-              </div>
-            </div> -->
           </form>
           <div class="ps-search--result">
             <div class="ps-result__content">
@@ -270,9 +267,13 @@
       <div class="ps-navigation__left">
         <nav class="ps-main-menu">
           <ul class="menu">
+            <li class="has-mega-menu"><a (click)="Goto6()">Home</a></li>
+
             <li class="has-mega-menu">
               <a>
-                <i class="fa fa-bars"></i>Products<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span></a>
+                <!-- <i class="fa fa-bars"></i> -->
+                Products<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
+              </a>
               <div class="mega-menu">
                 <div class="container">
                   <div class="mega-menu__row">
@@ -300,7 +301,10 @@
         </nav>
       </div>
       <div class="ps-navigation__right">
-        Need help? <strong>0020 - 500 - 000</strong>
+        Need help? <i class="fa fa-phone"></i> <strong>
+
+          0020 - 500 - 000
+        </strong>
       </div>
     </div>
   </div>

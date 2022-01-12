@@ -42,7 +42,7 @@
 @media (min-width: 992px) {
   .col-md-9 {
     width: 75%;
-    transform: translate(8px, -100px);
+    // transform: translate(8px, -100px);
   }
 }
 
@@ -117,3 +117,14 @@ th {
   font-size: 14px;
   color: #198ae3;
 }
+
+
+.ps-widget .ps-widget__title {
+  padding-top: 10%;
+  color: #198ae3;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
