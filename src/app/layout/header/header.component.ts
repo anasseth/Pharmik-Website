@@ -4,6 +4,7 @@ import { Cart } from 'src/app/Models/Cart/Cart-Model';
 import { CartService } from 'src/app/Service/Cart/cart.service';
 import { WebsiteInfoService } from 'src/app/Service/WebsiteInfo/webinfo.service';
 import { CategoriesService } from '../../Service/Categories/categories.service';
+import { ProductsService } from '../../Service/Product/product.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +17,8 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     public _CartService: CartService,
     public _WebsiteInfoService: WebsiteInfoService,
-    public _CategoryService: CategoriesService
+    public _CategoryService: CategoriesService,
+    public _ProductService: ProductsService,
   ) { }
 
   ngOnInit(): void {
@@ -50,5 +52,20 @@ export class HeaderComponent implements OnInit {
   Goto6() {
     this.router.navigate(['']);
   }
+
+  searchProducts(keyword: any) {
+    this.router.navigate(["/Shop"])
+    console.log("Keyword : ", keyword.value)
+    console.log(this._ProductService.allProductDataCopy)
+    this._ProductService.allProductData = this._ProductService.allProductDataCopy.filter(
+      (x: any) => x.name.toString().toLowerCase().indexOf(keyword.value.toLowerCase().toString()) != -1)
+  }
+
+  // searchProduct() {
+  //   console.log(this._ProductService.allProductDataCopy)
+  //   this._ProductService.allProductData = this._ProductService.allProductDataCopy.filter(
+  //     (x: any) => x.category.toString() == category.categoryName.toString()
+  //   )
+  // }
 
 }

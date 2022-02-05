@@ -18,6 +18,7 @@ export class CheckoutComponent implements OnInit {
   billingAmount: any = 0;
   checkoutObject: any = {};
   trackingIDofCustomer: any;
+  shippingCharges: any = 0;
 
   checkoutForm: FormGroup = this.fb.group({
     uniqueOrderNumber: ['', Validators.required],
@@ -50,7 +51,7 @@ export class CheckoutComponent implements OnInit {
     // if (this._CartService.NewCart != null || this._CartService.NewCart != null) {
     //   this.Router.navigate(["/"])
     // }
-    if (this._CartService.NewCart == null || this._CartService.NewCart == undefined || this._CartService.NewCart.typesOfPill.length == 0) {
+    if (this._CartService.NewCart == null || this._CartService.NewCart == undefined) {
       this.Router.navigate(["/Shop"])
     }
     this.calculateBilling();
@@ -81,6 +82,16 @@ export class CheckoutComponent implements OnInit {
     });
   }
 
+  clickPickup() {
+    this.shippingCharges = 0;
+    this.calculateBilling();
+  }
+
+  clickShipping() {
+    this.shippingCharges = 10;
+    this.calculateBilling();
+  }
+
   Tracking_ID_Generator() {
     return 'xxxxxxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
       var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
@@ -94,7 +105,7 @@ export class CheckoutComponent implements OnInit {
     for (var i = 0; i < itemBlling.length; i++) {
       billingAmount = billingAmount + Number(itemBlling[i].price * itemBlling[i].quantity)
     }
-    this.billingAmount = billingAmount;
+    this.billingAmount = billingAmount + this.shippingCharges;
   }
 
   submitBillingInformation() {

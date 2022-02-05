@@ -192,7 +192,8 @@
               <input
                 class="form-control ps1-input"
                 type="text"
-                placeholder="Search for products"
+                placeholder="Search for Products"
+                (change)="searchProducts($event.target)"
               />
               <div class="input-group-append icondiv">
                 <a

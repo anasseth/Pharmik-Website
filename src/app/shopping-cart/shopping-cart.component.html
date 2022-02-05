@@ -116,7 +116,7 @@
           <div class="ps-shopping__box">
             <div class="ps-shopping__row">
               <div class="ps-shopping__label">Subtotal</div>
-              <div class="ps-shopping__price">$120.46</div>
+              <div class="ps-shopping__price">${{ this.billingAmount }}</div>
             </div>
             <div class="ps-shopping__label">Shipping</div>
             <div class="ps-shopping__checkbox">
@@ -125,16 +125,23 @@
                   class="form-check-input"
                   type="radio"
                   id="cart-free-ship"
-                  checked
+                  name="shipmentCharges"
+                  (click)="clickPickup()"
                 />
                 <label class="form-check-label" for="cart-free-ship"
-                  >Free shipping</label
+                  >Pickup : $0</label
                 >
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" id="cart-ship" />
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="cart-ship"
+                  name="shipmentCharges"
+                  (click)="clickShipping()"
+                />
                 <label class="form-check-label" for="cart-ship"
-                  >Local Pickup: $10.00</label
+                  >Shipping Charges: ${{ this.shippingCharges }}</label
                 >
               </div>
             </div>
@@ -178,7 +185,9 @@
             </div>
             <div class="ps-shopping__row">
               <div class="ps-shopping__label">Total</div>
-              <div class="ps-shopping__price">$120.46</div>
+              <div class="ps-shopping__price">
+                ${{ this.billingAmount + this.shippingCharges }}
+              </div>
             </div>
             <div class="ps-shopping__checkout">
               <a class="ps-btn ps-btn--warning" (click)="Goto()"

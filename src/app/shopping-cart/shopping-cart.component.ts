@@ -10,6 +10,8 @@ import { CartService } from '../Service/Cart/cart.service';
 export class ShoppingCartComponent implements OnInit {
 
   couponCode: any = "";
+  billingAmount: any = 0;
+  shippingCharges: any = 0;
 
   constructor(
     private router: Router,
@@ -17,6 +19,7 @@ export class ShoppingCartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.calculateBilling();
   }
 
   Goto() {
@@ -30,19 +33,42 @@ export class ShoppingCartComponent implements OnInit {
     else if (status == "increment") {
       product.quantity = Number(product.quantity) + 1;
     }
+    this.calculateBilling()
   }
 
   removeItem(item: any, i: any) {
     this._CartService.NewCart.items.splice(i, i + 1);
     console.log("Cart : ", this._CartService.NewCart)
+    this.calculateBilling()
   }
 
   clearCart() {
     this._CartService.NewCart.items.length = 0
+    this.calculateBilling()
   }
 
   applyCoupon() {
     this._CartService.NewCart.couponCode = this.couponCode;
     this._CartService.NewCart.couponApplied = true;
   }
+
+  clickPickup() {
+    this.shippingCharges = 0;
+    this.calculateBilling();
+  }
+
+  clickShipping() {
+    this.shippingCharges = 10;
+    this.calculateBilling();
+  }
+
+  calculateBilling() {
+    var itemBlling = this._CartService.NewCart.items;
+    var billingAmount = 0;
+    for (var i = 0; i < itemBlling.length; i++) {
+      billingAmount = billingAmount + Number(itemBlling[i].price * itemBlling[i].quantity)
+    }
+    this.billingAmount = billingAmount + this.shippingCharges;
+  }
+
 }
