@@ -26,9 +26,9 @@ export class AppComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    if (this._CartService.NewCart == null || this._CartService.NewCart == undefined || this._CartService.NewCart.typesOfPill.length == 0) {
-      this.Router.navigate(["/Shop"])
-    }
+    // if (this._CartService.NewCart == null || this._CartService.NewCart == undefined || this._CartService.NewCart.typesOfPill.length == 0) {
+    //   this.Router.navigate(["/Shop"])
+    // }
     this._ProductService.getAllProducts();
     this._FAQService.getAllFAQs();
     this._CategoriesService.getAllCategories();
@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
     setTimeout(() => {
       /** spinner ends after 5 seconds */
       this.spinner.hide();
-    }, 5000);
+    }, 1000);
   }
 }
 

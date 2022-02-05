@@ -8,11 +8,11 @@ import { catchError, delay } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class CategoriesService {
-    allCategoriesData: any = []
+    allCategoriesData: any;
 
     constructor(public _http: HttpClient) { }
     loadAllCategories() {
-        return this._http.get<any>(environment.apiPath + 'categories').subscribe(
+        return this._http.get<any>(environment.apiPath + 'category').subscribe(
             data => {
                 console.log("Categories Data :", data)
                 this.allCategoriesData = data

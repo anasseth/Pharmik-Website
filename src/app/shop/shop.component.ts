@@ -131,9 +131,10 @@ export class ShopComponent implements OnInit {
   }
 
   filterProduct(category: any) {
-    console.log(category)
+    console.log(category.categoryName)
+    console.log(this._ProductService.allProductDataCopy)
     this._ProductService.allProductData = this._ProductService.allProductDataCopy.filter(
-      x => x.name == category.name
+      (x: any) => x.category.toString() == category.categoryName.toString()
     )
   }
 
@@ -152,7 +153,7 @@ export class ShopComponent implements OnInit {
   }
 
   discountedPrice(price: any) {
-    return Number(price*1.2).toFixed(2)
+    return Number(price * 1.2).toFixed(2)
   }
 
 

@@ -17,6 +17,7 @@ export class ProductsService {
         this._http.get<any>(environment.apiPath + 'products').subscribe(
             (data) => {
                 this.allProductData = data
+                this.allProductDataCopy = this.allProductData
                 for (var i = 0; i < this.allProductData.length; i++) {
                     if (this.allProductData[i].quantity == undefined || this.allProductData[i].quantity == null) {
                         this.allProductData[i].quantity = 0
