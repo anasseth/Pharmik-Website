@@ -193,6 +193,7 @@
                 class="form-control ps1-input"
                 type="text"
                 placeholder="Search for Products"
+                [(value)]="searchKeyword"
                 (change)="searchProducts($event.target)"
               />
               <div class="input-group-append icondiv">

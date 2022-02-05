@@ -13,6 +13,8 @@ import { ProductsService } from '../../Service/Product/product.service';
 })
 export class HeaderComponent implements OnInit {
 
+  searchKeyword: any = "";
+
   constructor(
     private router: Router,
     public _CartService: CartService,
@@ -59,6 +61,8 @@ export class HeaderComponent implements OnInit {
     console.log(this._ProductService.allProductDataCopy)
     this._ProductService.allProductData = this._ProductService.allProductDataCopy.filter(
       (x: any) => x.name.toString().toLowerCase().indexOf(keyword.value.toLowerCase().toString()) != -1)
+    keyword.value = null;
+    this.searchKeyword = ""
   }
 
   // searchProduct() {

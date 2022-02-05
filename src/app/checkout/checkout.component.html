@@ -7,12 +7,10 @@
     <h3 class="ps-checkout__title">Checkout</h3>
     <div class="ps-checkout__content">
       <div class="ps-checkout__wapper">
-        <p class="ps-checkout__text">
-          Returning customer? <a href="my-account.html">Click here to login</a>
-        </p>
+        <p class="ps-checkout__text">Finalize Your<a> Shopping</a></p>
         <p class="ps-checkout__text">
           Have a coupon?
-          <a href="shopping-cart.html">Click here to enter your code</a>
+          <a>Click here to enter your code</a>
         </p>
       </div>
       <form [formGroup]="checkoutForm">
@@ -31,6 +29,22 @@
                       [(ngModel)]="this.checkoutObject.first_name"
                     />
                   </div>
+
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['first_name'].invalid &&
+                      checkoutForm.controls['first_name'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="
+                        checkoutForm.controls['first_name'].errors?.required
+                      "
+                    >
+                      ** First Name is Required **
+                    </div>
+                  </div>
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="ps-checkout__group">
@@ -41,6 +55,21 @@
                       formControlName="last_name"
                       [(ngModel)]="this.checkoutObject.last_name"
                     />
+                  </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['last_name'].invalid &&
+                      checkoutForm.controls['last_name'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="
+                        checkoutForm.controls['last_name'].errors?.required
+                      "
+                    >
+                      ** Last Name is Required **
+                    </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -53,6 +82,21 @@
                       [(ngModel)]="this.checkoutObject.email_address"
                     />
                   </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['email_address'].invalid &&
+                      checkoutForm.controls['email_address'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="
+                        checkoutForm.controls['email_address'].errors?.required
+                      "
+                    >
+                      ** Email is Required **
+                    </div>
+                  </div>
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="ps-checkout__group">
@@ -64,11 +108,24 @@
                       [(ngModel)]="this.checkoutObject.mobile"
                     />
                   </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['mobile'].invalid &&
+                      checkoutForm.controls['mobile'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="checkoutForm.controls['mobile'].errors?.required"
+                    >
+                      ** Mobile Number is Required **
+                    </div>
+                  </div>
                 </div>
                 <div class="col-12">
                   <div class="ps-checkout__group">
                     <label class="ps-checkout__label"
-                      >Company name (optional)</label
+                      >Company name ( Optional )</label
                     >
                     <input
                       class="ps-input"
@@ -89,7 +146,23 @@
                       formControlName="address_line_one"
                       [(ngModel)]="this.checkoutObject.address_line_one"
                     />
-                    <!-- <input class="ps-input" type="text" placeholder="Apartment, suite, unit, etc. (optional)"> -->
+                    <!-- <input class="ps-input" type="text" placeholder="Apartment, suite, unit, etc. ( Optional )"> -->
+                  </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['address_line_one'].invalid &&
+                      checkoutForm.controls['address_line_one'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="
+                        checkoutForm.controls['address_line_one'].errors
+                          ?.required
+                      "
+                    >
+                      ** Address Line is Required **
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
@@ -99,7 +172,7 @@
                     <input
                       class="ps-input"
                       type="text"
-                      placeholder="Apartment, suite, unit, etc. (optional)"
+                      placeholder="Apartment, suite, unit, etc. ( Optional )"
                       [(ngModel)]="this.checkoutObject.address_line_two"
                       formControlName="address_line_two"
                     />
@@ -115,6 +188,17 @@
                       [(ngModel)]="this.checkoutObject.city"
                     />
                   </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['city'].invalid &&
+                      checkoutForm.controls['city'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div *ngIf="checkoutForm.controls['city'].errors?.required">
+                      ** City is Required **
+                    </div>
+                  </div>
                 </div>
                 <div class="col-12 col-md-6">
                   <div class="ps-checkout__group">
@@ -126,16 +210,42 @@
                       [(ngModel)]="this.checkoutObject.postcode"
                     />
                   </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['postcode'].invalid &&
+                      checkoutForm.controls['postcode'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="checkoutForm.controls['postcode'].errors?.required"
+                    >
+                      ** Postal Code is Required **
+                    </div>
+                  </div>
                 </div>
                 <div class="col-12">
                   <div class="ps-checkout__group">
-                    <label class="ps-checkout__label">County *</label>
+                    <label class="ps-checkout__label">Country *</label>
                     <input
                       class="ps-input"
                       type="text"
                       formControlName="country"
                       [(ngModel)]="this.checkoutObject.country"
                     />
+                  </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['country'].invalid &&
+                      checkoutForm.controls['country'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="checkoutForm.controls['country'].errors?.required"
+                    >
+                      ** Country is Required **
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
@@ -148,11 +258,26 @@
                       [(ngModel)]="this.checkoutObject.regionOrState"
                     />
                   </div>
+                  <div
+                    *ngIf="
+                      checkoutForm.controls['regionOrState'].invalid &&
+                      checkoutForm.controls['regionOrState'].touched
+                    "
+                    class="alert alert-danger alertBoxStyling heartbeat"
+                  >
+                    <div
+                      *ngIf="
+                        checkoutForm.controls['regionOrState'].errors?.required
+                      "
+                    >
+                      ** Region or State is Required **
+                    </div>
+                  </div>
                 </div>
                 <div class="col-12">
                   <div class="ps-checkout__group">
                     <label class="ps-checkout__label"
-                      >Order notes (optional)</label
+                      >Order notes ( Optional )</label
                     >
                     <textarea
                       class="ps-textarea"

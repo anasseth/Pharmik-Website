@@ -37,7 +37,7 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   removeItem(item: any, i: any) {
-    this._CartService.NewCart.items.splice(i, i + 1);
+    this._CartService.NewCart.items.splice(i, 1);
     console.log("Cart : ", this._CartService.NewCart)
     this.calculateBilling()
   }

@@ -17,26 +17,25 @@ export class CheckoutComponent implements OnInit {
 
   billingAmount: any = 0;
   checkoutObject: any = {};
-  trackingIDofCustomer: any;
+  trackingIDofCustomer: any = "";
   shippingCharges: any = 0;
 
   checkoutForm: FormGroup = this.fb.group({
-    uniqueOrderNumber: ['', Validators.required],
-    trackingID: ['', Validators.required],
     first_name: ['', Validators.required],
     last_name: ['', Validators.required],
-    email_address: ['', Validators.required],
+    email_address: ['', Validators.required, ,
+      Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")],
     mobile: ['', Validators.required],
-    company_name: ['', Validators.required],
+    company_name: [''],
     address_line_one: ['', Validators.required],
-    address_line_two: ['', Validators.required],
+    address_line_two: [''],
     city: ['', Validators.required],
     postcode: ['', Validators.required],
     country: ['', Validators.required],
     regionOrState: ['', Validators.required],
-    orderNotes: ['', Validators.required],
+    orderNotes: [''],
     paymentType: ['', Validators.required],
-    creditCardType: ['', Validators.required],
+    creditCardType: [''],
   })
 
   constructor(
@@ -56,8 +55,6 @@ export class CheckoutComponent implements OnInit {
     }
     this.calculateBilling();
     this.checkoutObject = {
-      uniqueOrderNumber: null,
-      trackingID: null,
       first_name: null,
       last_name: null,
       email_address: null,
@@ -129,28 +126,28 @@ export class CheckoutComponent implements OnInit {
     console.log("Cart Object : ", this._CartService.NewCart)
     console.log("Cart Object : ", JSON.stringify(this._CartService.NewCart, undefined, 3))
 
-    // this._CartService.postNewCart().subscribe(
-    //   (data) => {
-    //     console.log(data)
-    //   },
-    //   (err) => {
-    //     console.log(err)
-    //   }, () => {
-    //     this._CheckoutService.postNewCheckout(this.checkoutObject).subscribe(
-    //       (data) => {
-    //         console.log(data)
-    //         this.openModal()
-    //         this.resetForm()
-    //       },
-    //       (err) => {
-    //         console.log(err)
-    //         this.trackingIDofCustomer = null;
-    //       }, () => {
-    //         console.log("Cart Posted Successfully")
-    //       }
-    //     )
-    //   }
-    // )
+    this._CartService.postNewCart().subscribe(
+      (data) => {
+        console.log(data)
+      },
+      (err) => {
+        console.log(err)
+      }, () => {
+        this._CheckoutService.postNewCheckout(this.checkoutObject).subscribe(
+          (data) => {
+            console.log(data)
+            this.openModal()
+            this.resetForm()
+          },
+          (err) => {
+            console.log(err)
+            // this.trackingIDofCustomer = null;
+          }, () => {
+            console.log("Cart Posted Successfully")
+          }
+        )
+      }
+    )
 
   }
   openModal() {
@@ -168,6 +165,8 @@ export class CheckoutComponent implements OnInit {
   }
   closeModal() {
     this.modalService.close(this.modalRef);
+    this.trackingIDofCustomer = null;
+    this.Router.navigate(["/"])
   }
 
   resetForm() {
@@ -192,10 +191,13 @@ export class CheckoutComponent implements OnInit {
   }
 
   onCheckoutFormCheck() {
+    console.log("Form Validation : ", this.checkoutForm.valid)
     if (this.checkoutForm.valid) {
+      console.log("Condition#1")
       this.submitBillingInformation()
       return true;
     } else {
+      console.log("Condition#2")
       this.validateAllFormFields(this.checkoutForm);
       return true;
     }
