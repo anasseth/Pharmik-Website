@@ -81,6 +81,12 @@
             *ngIf="this._ProductService.allProductData != undefined"
           >
             <div
+              class="messageContainer"
+              *ngIf="this._ProductService.allProductData.length == 0"
+            >
+              Currently, No Product Available in this Category
+            </div>
+            <div
               class="ps-product ps-product--list"
               *ngFor="
                 let product of this._ProductService.allProductData;
@@ -118,7 +124,7 @@
                   <div class="ps-product__badge"></div>
                 </div>
                 <div class="ps-product__info">
-                  <a class="ps-product__branch">Plus UK Meds</a>
+                  <a class="ps-product__branch">{{ product.composition }}</a>
                   <h5 class="ps-product__title">
                     <a>{{ product.name }}</a>
                   </h5>
@@ -275,6 +281,7 @@
                     *ngFor="
                       let category of this._CategoryService.allCategoriesData
                     "
+                    class="categoryListStyling"
                   >
                     <a (click)="filterProduct(category)">{{
                       category.categoryName
