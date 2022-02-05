@@ -331,7 +331,7 @@
             <li class="has-mega-menu">
               <a style="color: white">
                 <!-- <i class="fa fa-bars"></i> -->
-                Products<span class="sub-toggle"
+                Products Category<span class="sub-toggle"
                   ><i class="fa fa-chevron-down"></i
                 ></span>
               </a>
@@ -339,10 +339,16 @@
                 <div class="container">
                   <div class="mega-menu__row">
                     <div class="mega-menu__column">
-                      <h4>Category</h4>
+                      <!-- <h4>Category</h4> -->
                       <ul class="sub-menu--mega">
-                        <li><a>Sleeping Pills</a></li>
-                        <li><a>antiboitic</a></li>
+                        <li
+                          *ngFor="
+                            let category of this._CategoryService
+                              .allCategoriesData
+                          "
+                        >
+                          <a>{{ category.categoryName }}</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
