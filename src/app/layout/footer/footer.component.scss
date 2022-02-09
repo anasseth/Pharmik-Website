@@ -3,10 +3,10 @@
 }
 
 .ps-footer--1 .ps-footer--top .row {
-    background-color: #ffffff;
-    border-radius: 30px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    height: 70px;
+    background-color : #ffffff;
+    border-radius    : 30px;
+    box-shadow       : rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    height           : 70px;
     // padding-bottom: 1%;
     // margin-top: 50px;
 }
@@ -17,3 +17,29 @@
 //     width: 100%;
 // }
 // }
+
+.ps-navigation--footer .ps-nav__item a {
+    color          : #001b7b;
+    display        : inline-flex;
+    width          : 44px;
+    height         : 44px;
+    margin         : 0 auto;
+    justify-content: center;
+    align-items    : center;
+    position       : relative;
+}
+
+.ps-navigation--footer .ps-nav__item .badge {
+    position        : absolute;
+    top             : 4px;
+    right           : 2px;
+    width           : 18px;
+    height          : 18px;
+    font-size       : 16px;
+    border-radius   : 50%;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    background-color: #198ae3;
+    color           : white;
+}
