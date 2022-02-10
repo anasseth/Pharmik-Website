@@ -133,18 +133,20 @@
     </div>
   </div>
 
+  <div class="ps-navigation--footer mobilemenu_hide"
+    style=" background-color: white; font-size: 16px;display: block;height: 30%;" *ngIf="!show">
+    <ul style="font-weight: bold;color: #198ae3;">Product Category</ul>
+    <li *ngFor="
+            let category of this._CategoryService
+              .allCategoriesData
+          ">
+      <a>{{ category.categoryName }}</a>
+    </li>
 
+  </div>
   <div class="ps-navigation--footer">
 
-    <div style="z-index: 1000; background-color: white; font-size: 16px;" *ngIf="!show">
-      <li *ngFor="
-              let category of this._CategoryService
-                .allCategoriesData
-            ">
-        <a>{{ category.categoryName }}</a>
-      </li>
 
-    </div>
     <!-- <li class="has-mega-menu">
           <a style="color: white">
             Products Category<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
@@ -172,19 +174,19 @@
           class="icon-cross"></i></a>
     </div>
     <div class="ps-nav__item">
-      <a><i class="icon-home2" (click)="Goto6()"></i></a>
+      <a><i class="fa fa-home" (click)="Goto6()"></i></a>
     </div>
     <div class="ps-nav__item">
-      <a><i class="icon-menu-circle" style="font-size: 30px;" (click)="Goto3()"></i><span class="badge">2</span></a>
+      <a><i class="fa fa-plus-circle" style="font-size: 40px;" (click)="Goto3()"></i></a>
     </div>
     <div class="ps-nav__item">
-      <a><i class="icon-question-circle" (click)="Goto4()"></i></a>
+      <a><i class=" fa fa-phone" (click)="Goto1()"></i></a>
     </div>
 
     <div class="ps-nav__item">
-      <a><i class=" fa fa-phone" (click)="Goto1()"></i></a>
-      <!-- <span class="badge">3</span> -->
+      <a><i class="icon-question-circle" (click)="Goto4()"></i></a>
     </div>
+    <!-- <span class="badge">2</span> -->
 
   </div>
 </footer>

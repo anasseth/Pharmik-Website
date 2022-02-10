@@ -9,7 +9,7 @@ import { WebsiteInfoService } from 'src/app/Service/WebsiteInfo/webinfo.service'
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  show:boolean= false;
+  show: boolean = true;
   constructor(
     public _WebsiteInfoService: WebsiteInfoService,
     public _CategoryService: CategoriesService,
@@ -55,6 +55,6 @@ export class FooterComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  
+
 
 }

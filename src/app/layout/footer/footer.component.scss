@@ -43,3 +43,9 @@
     background-color: #198ae3;
     color           : white;
 }
+
+@media (min-width: 600px) {
+    .mobilemenu_hide {
+        display: none !important;
+    }
+}
