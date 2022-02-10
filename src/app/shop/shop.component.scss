@@ -161,3 +161,15 @@ th {
   padding-top: 16px;
   color: white;
 }
+
+
+@media (min-width: 300px) and (max-width: 520px) {
+
+  .mobilemar {
+    margin-top: 15% !important;
+  }
+
+  .hide1 {
+    display: none !important;
+  }
+}

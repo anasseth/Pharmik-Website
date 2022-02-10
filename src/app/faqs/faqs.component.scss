@@ -52,3 +52,15 @@
     color: rgb(124, 124, 124);
 }
 
+
+
+@media (min-width: 300px) and (max-width: 520px) {
+
+    .mobilemar {
+      padding-top: 25% !important;
+    }
+  
+    .hide1 {
+      display: none !important;
+    }
+  }

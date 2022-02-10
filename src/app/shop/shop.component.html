@@ -12,11 +12,9 @@
     <div class="ps-categogy__content">
       <div class="row row-reverse">
         <div class="col-12 col-md-9">
-          <div class="ps-categogy__wrapper">
+          <div class="ps-categogy__wrapper mobilemar">
             <div class="ps-categogy__type">
-              <a class="active"
-                ><img src="/../../assets/images/bars.svg" alt
-              /></a>
+              <a class="active"><img src="/../../assets/images/bars.svg" alt /></a>
               <!-- <a><img src="/../../assets/images/gird2.svg" alt /></a
               >
               <a><img src="/../../assets/images/gird3.svg" alt /></a
@@ -26,15 +24,9 @@
             <div class="ps-categogy__onsale">
               <form>
                 <div class="custom-control custom-checkbox">
-                  <input
-                    class="custom-control-input"
-                    type="checkbox"
-                    id="onSaleProduct"
-                    style="transform: translate(-5px, 5px)"
-                  />
-                  <label class="custom-control-label" for="onSaleProduct"
-                    >Show only products on sale</label
-                  >
+                  <input class="custom-control-input" type="checkbox" id="onSaleProduct"
+                    style="transform: translate(-5px, 5px)" />
+                  <label class="custom-control-label" for="onSaleProduct">Show only products on sale</label>
                 </div>
               </form>
             </div>
@@ -76,29 +68,19 @@
               </form>
             </div>
           </div>
-          <div
-            class="ps-categogy--list"
-            *ngIf="this._ProductService.allProductData != undefined"
-          >
-            <div
-              class="messageContainer"
-              *ngIf="this._ProductService.allProductData.length == 0"
-            >
+          <div class="ps-categogy--list" *ngIf="this._ProductService.allProductData != undefined">
+            <div class="messageContainer" *ngIf="this._ProductService.allProductData.length == 0">
               Currently, No Product Available in this Category
             </div>
-            <div
-              class="ps-product ps-product--list"
-              *ngFor="
+            <div class="ps-product ps-product--list" *ngFor="
                 let product of this._ProductService.allProductData;
                 let productIndex = index
-              "
-              style="
+              " style="
                 box-shadow: 0px 14px 14px -1px rgb(220 227 246 / 50%);
                 -webkit-box-shadow: 0px 14px 14px -1px rgb(220 227 246 / 50%);
                 border-radius: 30px;
                 margin-top: 10px;
-              "
-            >
+              ">
               <div class="ps-product__content">
                 <div class="ps-product__thumbnail">
                   <a class="ps-product__image">
@@ -107,18 +89,9 @@
                     </figure>
                   </a>
                   <div class="ps-product__actions">
-                    <div
-                      class="ps-product__item"
-                      data-toggle="tooltip"
-                      data-placement="left"
-                      title="Quick view"
-                    >
-                      <a data-toggle="modal" data-target="#popupQuickview"
-                        ><i
-                          class="fa fa-search"
-                          (click)="openModal(product)"
-                        ></i
-                      ></a>
+                    <div class="ps-product__item" data-toggle="tooltip" data-placement="left" title="Quick view">
+                      <a data-toggle="modal" data-target="#popupQuickview"><i class="fa fa-search"
+                          (click)="openModal(product)"></i></a>
                     </div>
                   </div>
                   <div class="ps-product__badge"></div>
@@ -129,18 +102,12 @@
                     <a>{{ product.name }}</a>
                   </h5>
                   <div class="ps-product__rating">
-                    <select
-                      class="ps-rating"
-                      data-read-only="true"
-                      (change)="setPillTypeValue(product, $event, productIndex)"
-                    >
-                      <option
-                        *ngFor="
+                    <select class="ps-rating" data-read-only="true"
+                      (change)="setPillTypeValue(product, $event, productIndex)">
+                      <option *ngFor="
                           let pill of product.typesOfPill;
                           let pillIndex = index
-                        "
-                        [value]="pillIndex"
-                      >
+                        " [value]="pillIndex">
                         {{ pill.quantity }} pills for ${{ pill.our_price }}
                       </option>
                     </select>
@@ -156,59 +123,32 @@
                 </div>
               </div>
               <div class="ps-product__footer">
-                <div
-                  class="ps-product__meta"
-                  *ngFor="let pill of product.typesOfPill; let j = index"
-                >
+                <div class="ps-product__meta" *ngFor="let pill of product.typesOfPill; let j = index">
                   <div *ngIf="j == 0" [id]="j">
-                    <span class="ps-product__price sale"
-                      >${{ pill.our_price }}</span
-                    >
-                    <span class="ps-product__del"
-                      ><b class="del"
-                        >${{ discountedPrice(pill.our_price) }}
+                    <span class="ps-product__price sale">${{ pill.our_price }}</span>
+                    <span class="ps-product__del"><b class="del">${{ discountedPrice(pill.our_price) }}
                       </b>
-                      <b class="ps-product_desc"
-                        >for {{ pill.quantity }} pills</b
-                      ></span
-                    >
+                      <b class="ps-product_desc">for {{ pill.quantity }} pills</b></span>
                   </div>
                 </div>
                 <div class="ps-product__quantity">
                   <h6>Quantity</h6>
                   <div class="def-number-input number-input safari_only">
-                    <button
-                      class="minus"
-                      (click)="
+                    <button class="minus" (click)="
                         quantityChanged('decrement', product, $event.target)
-                      "
-                    >
+                      ">
                       <i class="icon-minus"></i>
                     </button>
-                    <input
-                      class="quantity"
-                      min="0"
-                      [(ngModel)]="product.quantity"
-                      [value]="product.quantity"
-                      type="number"
-                      id="quantityInputField"
-                    />
-                    <button
-                      class="plus"
-                      (click)="
+                    <input class="quantity" min="0" [(ngModel)]="product.quantity" [value]="product.quantity"
+                      type="number" id="quantityInputField" />
+                    <button class="plus" (click)="
                         quantityChanged('increment', product, $event.target)
-                      "
-                    >
+                      ">
                       <i class="icon-plus"></i>
                     </button>
                   </div>
-                  <a
-                    class="ps-btn ps-btn--warning"
-                    data-toggle="modal"
-                    data-target="#popupAddcart"
-                    (click)="addToCart(product)"
-                    >Add to cart</a
-                  >
+                  <a class="ps-btn ps-btn--warning" data-toggle="modal" data-target="#popupAddcart"
+                    (click)="addToCart(product)">Add to cart</a>
                 </div>
                 <div class="ps-product__variations">
                   <!-- <a class="ps-product__link">Add to wishlist</a
@@ -244,25 +184,18 @@
               </form>
             </div> -->
           </div>
-          <div
-            class="ps-delivery"
-            data-background="img/promotion/banner-delivery-2.jpg"
-            style="
+          <div class="ps-delivery" data-background="img/promotion/banner-delivery-2.jpg" style="
               background-image: url('/../../assets/images/banner-delivery-2.jpg');
-            "
-            style="
+            " style="
               background-image: url('/../../assets/images/banner-delivery-2.jpg');
               box-shadow: 0px 14px 14px -1px rgb(233 232 232 / 75%);
               -webkit-box-shadow: 0px 14px 14px -1px rgb(233 232 232 / 75%);
-            "
-          >
+            ">
             <div class="ps-delivery__content">
               <div class="ps-delivery__text">
-                <i class="icon-shield-check"></i
-                ><span>
+                <i class="icon-shield-check"></i><span>
                   <strong>100% Secure delivery </strong>without contacting the
-                  courier</span
-                >
+                  courier</span>
               </div>
               <a class="ps-delivery__more">More</a>
             </div>
@@ -277,12 +210,9 @@
               <a class="ps-block-control"><i class="fa fa-angle-down"></i></a>
               <div class="ps-widget__content ps-widget__category">
                 <ul class="menu--mobile">
-                  <li
-                    *ngFor="
+                  <li *ngFor="
                       let category of this._CategoryService.allCategoriesData
-                    "
-                    class="categoryListStyling"
-                  >
+                    " class="categoryListStyling">
                     <a (click)="filterProduct(category)">{{
                       category.categoryName
                     }}</a>
@@ -319,11 +249,7 @@
                                 <div class="slide"><img src="/../../assets/images/002.jpg" alt="alt" /></div>
                                 <div class="slide"><img src="/../../assets/images/006.jpg" alt="alt" /></div> -->
                 <div class="slide">
-                  <img
-                    [src]="currentProductObject.imageURLID"
-                    alt="alt"
-                    class="imageBorder"
-                  />
+                  <img [src]="currentProductObject.imageURLID" alt="alt" class="imageBorder" />
                 </div>
                 <!-- <div class="slide"><img src="/../../assets/images/016.jpg" alt="alt" /></div> -->
               </div>
@@ -335,10 +261,8 @@
                 <span class="ps-badge ps-badge--instock">IN STOCK</span>
               </div>
               <div class="ps-product__branch">
-                <a
-                  >{{ currentProductObject.name }} $
-                  {{ currentProductObject }}</a
-                >
+                <a>{{ currentProductObject.name }} $
+                  {{ currentProductObject }}</a>
               </div>
               <div class="ps-product__title">
                 <a>{{ currentProductObject.composition }}</a>
@@ -362,30 +286,22 @@
               </div>
 
               <div class="ps-product__meta">
-                <span class="ps-product__price"
-                  >Starting From $
+                <span class="ps-product__price">Starting From $
                   {{
                     currentProductObject.typesOfPill != undefined ||
                     currentProductObject.typesOfPill != null
                       ? currentProductObject.typesOfPill[0].our_price
                       : ""
-                  }}</span
-                >
+                  }}</span>
               </div>
               <div class="ps-product__type">
                 <ul class="ps-product__list">
                   <li>
-                    <span class="ps-list__title"
-                      >Tags: {{ currentProductObject?.tag }}</span
-                    >
+                    <span class="ps-list__title">Tags: {{ currentProductObject?.tag }}</span>
                     <br />
-                    <a class="ps-list__text"
-                      >Composition: {{ currentProductObject?.composition }}</a
-                    >
+                    <a class="ps-list__text">Composition: {{ currentProductObject?.composition }}</a>
                     <br />
-                    <a class="ps-list__text"
-                      >Type: {{ currentProductObject?.type }}</a
-                    >
+                    <a class="ps-list__text">Type: {{ currentProductObject?.type }}</a>
                   </li>
                   <!-- <li> <span class="ps-list__title">SKU: </span><a class="ps-list__text">SF-006</a>
                                     </li> -->
