@@ -324,7 +324,7 @@
   </div>
 </header>
 
-<header class="addmobile_header search">
+<header class="addmobile_header search" style="position: fixed;z-index: 1000;width: 100%;">
   <div class="row">
     <div class="size col-3">
       <div class="ps-logo">
@@ -332,7 +332,7 @@
           <img (click)="Goto3()" src="/../../assets/images/pharm-icon.jpg" width="70" height="60" alt /></a>
       </div>
     </div>
-    <div class="mt-4 col-9">
+    <div class="mt-4 col-9" style="padding-right: 25px;">
       <input class="form-control ps1-input" type="text" placeholder="Search for products" />
       <div class="input-group-append icondiv">
         <a><i class="fa fa-search"></i></a>
@@ -340,58 +340,5 @@
     </div>
 
   </div>
-  <!-- <div class="ps-navigation " style="background-color: #001b7b">
-    <div class="container">
-      <div class="ps-navigation__left">
-        <nav class="ps-main-menu">
-          <ul class="menu">
-            <li class="has-mega-menu">
-              <a (click)="Goto6()" style="color: white">Home</a>
-            </li>
 
-            <li class="has-mega-menu">
-              <a style="color: white">
-                Products Category<span class="sub-toggle"><i class="fa fa-chevron-down"></i></span>
-              </a>
-              <div class="mega-menu">
-                <div class="container">
-                  <div class="mega-menu__row">
-                    <div class="mega-menu__column">
-                      <ul class="sub-menu--mega">
-                        <li *ngFor="
-                            let category of this._CategoryService
-                              .allCategoriesData
-                          ">
-                          <a>{{ category.categoryName }}</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-
-            <li class="has-mega-menu">
-              <a (click)="Goto3()" style="color: white">Shop</a>
-            </li>
-
-            <li class="has-mega-menu">
-              <a (click)="Goto2()" style="color: white">Blog</a>
-            </li>
-            <li class="has-mega-menu">
-              <a (click)="Goto4()" style="color: white">FAQs</a>
-            </li>
-            <li class="has-mega-menu">
-              <a (click)="Goto1()" style="color: white">Contact</a>
-            </li>
-            <li class="has-mega-menu">
-              <a (click)="Goto()" style="color: white">About us</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-    </div>
-  </div> -->
 </header>

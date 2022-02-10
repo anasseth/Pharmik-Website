@@ -136,8 +136,16 @@
     margin-top: 5% !important;
   }
 
+
 }
 
+@media (min-width: 300px) and (max-width: 520px) {
+
+  .mobilemar {
+    margin-top: 15% !important;
+  }
+
+}
 
 .col-lg-3,
 .col-md-4 {
@@ -147,4 +155,9 @@
   padding-left  : 6px;
   padding-top   : 5px;
   padding-bottom: 5px;
+}
+
+
+.ps-promo .col-12 {
+  padding-bottom: 52px !important;
 }
