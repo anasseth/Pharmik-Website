@@ -133,7 +133,7 @@
     </div>
   </div>
 
-  <div class="ps-navigation--footer mobilemenu_hide mobilemenu" *ngIf="!show">
+  <div class="ps-navigation--footer mobilemenu_hide mobilemenu" *ngIf="!show" @onOff>
     <ul style="font-weight: bold;color: #198ae3;">Product Category</ul>
     <ul  *ngFor="
             let category of this._CategoryService

@@ -2,11 +2,40 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CategoriesService } from 'src/app/Service/Categories/categories.service';
 import { WebsiteInfoService } from 'src/app/Service/WebsiteInfo/webinfo.service';
+import { trigger, state, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
+  animations: [
+    // trigger('onOff', [
+    //   transition(':enter', [style({
+    //     opacity: 0,
+    //     transform: 'translateY(100%)'
+    //   }),
+
+    //   animate(200)
+    // ])
+    // ])
+    trigger('onOff', [
+      transition(':enter', [style({
+        opacity: 0,
+        transform: 'translateY(100%)'
+      }),
+
+      animate(200)
+      ]),
+      transition(':leave', [style({
+        // opacity: 0,
+        // transform: 'translateY(-50px)'
+      }),
+      animate(200)
+
+
+      ])
+    ])
+  ]
 })
 export class FooterComponent implements OnInit {
   show: boolean = true;
