@@ -27,10 +27,11 @@
           <div class="row">
             <div class="col-12 col-md-4">
               <div class="ps-footer--address">
-                <div class="ps-logo"><a> <img src="/../../assets/images/pharm-icon-removebg-preview.png" height="100"
-                      alt><img class="logo-white" src="img/logo-white.png" alt><img class="logo-black"
-                      src="img/Logo-black.png" alt><img class="logo-white-all" src="img/logo-white1.png" alt><img
-                      class="logo-green" src="img/logo-green.png" alt></a></div>
+                <div class="ps-logo "><a> <img class="mobilelogo"
+                      src="/../../assets/images/pharm-icon-removebg-preview.png" height="100" alt><img
+                      class="logo-white" src="img/logo-white.png" alt><img class="logo-black" src="img/Logo-black.png"
+                      alt><img class="logo-white-all" src="img/logo-white1.png" alt><img class="logo-green"
+                      src="img/logo-green.png" alt></a></div>
                 <div class="ps-footer__title">Our store</div>
                 <!-- <p>1487 Rocky Horse Carrefour<br />Arlington, TX 16819</p> -->
                 <p>{{ _WebsiteInfoService.WebsiteInfo.address }}</p>
@@ -134,8 +135,10 @@
   </div>
 
   <div class="ps-navigation--footer mobilemenu_hide mobilemenu" *ngIf="!show" @onOff>
-    <ul style="font-weight: bold;color: #198ae3;">Product Category</ul>
-    <ul  *ngFor="
+    <ul class="ull1">Product Category</ul>
+    <ul class="ull2"></ul>
+
+    <ul class="ull" *ngFor="
             let category of this._CategoryService
               .allCategoriesData
           ">

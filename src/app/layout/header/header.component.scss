@@ -214,6 +214,17 @@
   cursor  : pointer;
 }
 
+.fixedheader {
+  position                  : fixed;
+  z-index                   : 1000;
+  width                     : 100%;
+  box-shadow                : #001b7b 0px 1px 15px;
+  border-bottom-left-radius : 20px;
+  border-bottom-right-radius: 20px;
+
+
+}
+
 // ul.menu {
 //   padding: 1% !important;
 // }
