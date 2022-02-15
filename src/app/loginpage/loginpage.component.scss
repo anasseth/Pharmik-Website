@@ -166,11 +166,24 @@
 }
 
 
-.sha{
+.sha {
   border-radius: 20px;
-  }
-.sha:hover{
-  border-radius: 20px;
-// border: 2px solid #001b7b;
-transition-duration: 0.3s;
+}
+
+.sha:hover {
+  border-radius      : 20px;
+  // border: 2px solid #001b7b;
+  transition-duration: 0.3s;
+}
+
+
+.ps-review__name {
+  font-weight     : 600;
+  background-color: #d3dcff;
+  color           : #001b7b;
+  border-radius   : 20px;
+  width           : fit-content;
+  padding-left    : 3%;
+  padding-right   : 3%;
+  font-size       : 16px;
 }
