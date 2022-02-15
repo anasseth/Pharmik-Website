@@ -24,13 +24,13 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
         transform: 'translateY(100%)'
       }),
 
-      animate(200)
+      animate(300)
       ]),
       transition(':leave', [style({
         // opacity: 0,
         // transform: 'translateY(-50px)'
       }),
-      animate(200)
+      animate(300)
 
 
       ])
